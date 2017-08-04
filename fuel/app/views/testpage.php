@@ -63,4 +63,4 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 	<p><a class="modal_btn def">クリックするとdefモーダルウィンドウを開きます。</a></p>
 </div>
 
-<?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
+<?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'normal')); ?>
