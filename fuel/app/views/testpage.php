@@ -58,3 +58,9 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 	<?= Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 	<?= Form::close(); ?>
 </div>
+
+<div>
+	<p><a class="modal_btn abc">クリックするとabcモーダルウィンドウを開きます。</a></p>
+</div>
+
+<?= View::forge('popup/wrap', array('name' => 'abc', 'size' => 'big', 'popup_data' => $value)); ?>
