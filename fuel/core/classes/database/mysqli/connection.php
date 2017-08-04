@@ -274,8 +274,6 @@ class Database_MySQLi_Connection extends \Database_Connection
 				// This benchmark is worthless
 				\Profiler::delete($benchmark);
 			}
-			var_dump($sql);
-			exit;
 			throw new \Database_Exception($this->_connection->error.' [ '.$sql.' ]', $this->_connection->errno);	//エラー発生
 		}
 
