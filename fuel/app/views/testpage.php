@@ -45,7 +45,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <div>
-	<?= Form::open(array('action' => 'testgpage/selectPlayer', 'method' => 'post'));?>
+	<?= Form::open(array('action' => 'testpage/selectPlayer', 'method' => 'post'));?>
 		<select name=”player”>
 		<option value=”3”>3人</option>
 		<option value=”4”>4人</option>
