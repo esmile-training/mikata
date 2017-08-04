@@ -57,7 +57,6 @@ class Query
 	 * @var  string  table alias
 	 */
 	protected $alias = 't0';
-	//protected  $alias;	//実験用に追加
 
 	/**
 	 * @var  array  relations to join on
