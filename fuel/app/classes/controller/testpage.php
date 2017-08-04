@@ -11,6 +11,7 @@ class Controller_Testpage extends Controller_Base_Game
 	{
 		$param = input::post();
 		
-		printf($param["player"]);
+		//ビュー表示
+		Response::redirect('inputName');
 	}
 }
