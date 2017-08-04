@@ -11,6 +11,6 @@ class Controller_Testpage extends Controller_Base_Game
 	{
 		$param = input::post();
 		
-		var_dump($param);
+		printf($param["player"]);
 	}
 }
