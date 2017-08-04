@@ -269,13 +269,17 @@ class Database_MySQLi_Connection extends \Database_Connection
 		// Execute the query
 		if (($result = $this->_connection->query($sql)) === false)
 		{
+			var_dump($result);
+			var_dump($sql);
+			var_dump($as_object);
+			exit;
 			if (isset($benchmark))
 			{
 				// This benchmark is worthless
 				\Profiler::delete($benchmark);
 			}
 
-			throw new \Database_Exception($this->_connection->error.' [ '.$sql.' ]', $this->_connection->errno);
+			throw new \Database_Exception($this->_connection->error.' [ '.$sql.' ]', $this->_connection->errno);	//エラー発生
 		}
 
 		// check for multiresults, we don't support those at the moment
