@@ -10,7 +10,7 @@ class Controller_Testpage extends Controller_Base_Game
 	public function action_selectPlayer()
 	{
 		$param = input::post();
-		
+		exit;
 		//ビュー表示
 		Response::redirect('inputName');
 	}
