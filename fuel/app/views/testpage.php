@@ -45,13 +45,16 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <div>
-<select name=”player”>
-<option value=”3”>3人</option>
-<option value=”4”>4人</option>
-<option value=”5”>5人</option>
-<option value=”6”>6人</option>
-<option value=”7”>7人</option>
-<option value=”8”>8人</option>
-<option value=”9”>9人</option>
-</select>
+	<?= Form::open(array('action' => 'testgpage/selectPlayer', 'method' => 'post'));?>
+		<select name=”player”>
+		<option value=”3”>3人</option>
+		<option value=”4”>4人</option>
+		<option value=”5”>5人</option>
+		<option value=”6”>6人</option>
+		<option value=”7”>7人</option>
+		<option value=”8”>8人</option>
+		<option value=”9”>9人</option>
+		</select>
+	<?= Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
+	<?= Form::close(); ?>
 </div>
