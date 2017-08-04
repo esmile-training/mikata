@@ -2,7 +2,7 @@
 
 class Model_Developer extends Model_Base_Db
 {
-	protected static $_table_name = 'developer';     // テーブル名がモデル名の複数形なら省略可
+	protected static $_table_name = 'user';     // テーブル名がモデル名の複数形なら省略可
 	protected static $_primariy = array('id');  // プライマリーキーがidなら省略可
 
 	//使用するフィールド名をセット
