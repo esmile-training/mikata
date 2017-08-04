@@ -60,7 +60,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <div>
-	<p><a class="modal_btn abc">クリックするとabcモーダルウィンドウを開きます。</a></p>
+	<p><a class="modal_btn def">クリックするとdefモーダルウィンドウを開きます。</a></p>
 </div>
 
-<?= View::forge('popup/wrap', array('name' => 'abc', 'size' => 'big', 'popup_data' => $value)); ?>
+<?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
