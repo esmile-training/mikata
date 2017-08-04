@@ -35,8 +35,8 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </script>
 
 <div id="折りたたみB">
-<a href="javascript:dd('折りたたみ指示B')"><img src="img/HP_Triangle_TR12pxc008080.gif" id="折りたたみ指示Bi" style="border-width : 0px;" alt="右三角印">　ランキング</a>
-<div style="display:none;margin-left:18pt" id="折りたたみ指示B">1位<br>
+<a href="javascript:dd('折りたたみ指示B')"><img src="img/HP_Triangle_TR12pxc008080.gif" id="折りたたみ指示Bi" style="border-width : 0px;" alt="右">　ランキング</a>
+<div style="display:none;margin-left:18pt" id="折りたたみ指示B">１位<br>
 ２位<br>
 ３位<br>
 </div>
