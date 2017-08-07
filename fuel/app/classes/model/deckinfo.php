@@ -19,12 +19,12 @@ class Model_Deckinfo extends Model
 		{
 			self::$themeStock[$n] = $n;
 		}
-		shuffle($this->themeStock);
+		shuffle(self::$themeStock);
 		
 		for ($m = 1; $m <= $anserCardAll; $m++)
 		{
 			self::$anserStock[$m] = $m;
 		}
-		shuffle($this->anserStock);
+		shuffle(self::$anserStock);
 	}
 }
