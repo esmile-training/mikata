@@ -65,5 +65,4 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
 
-<?= Model_deckInfo::shuffleCard();
-	printf(Model_deckInfo::$themeStock[3]); ?>
+<?= printf($this->viewData); ?>
