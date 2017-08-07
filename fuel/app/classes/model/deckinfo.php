@@ -4,13 +4,16 @@ class Model_Deckinfo extends Model
 {
 	static $_myWorldCardAll = 90;
 	static $_thatCardAll = 392;
-	public $themeStock = array();
-	public $anserStock = array();
+	public static $themeStock = array();
+	public static $anserStock = array();
 	
 	public static function shuffleCard()
 	{
 		$themeCardAll = self::$_myWorldCardAll;
 		$anserCardAll = self::$_thatCardAll;
+		
+		self::$themeStock = array($themeCardAll);
+		self::$anserStock = array($anserCardAll);
 		
 		for ($n = 1; $n <= $themeCardAll; $n++)
 		{
