@@ -1,6 +1,6 @@
 <?php
 
-class Model_deckInfo extends Model
+class Model_DeckInfo extends Model
 {
 	static $_myWorldCardAll = 90;
 	static $_thatCardAll = 392;
