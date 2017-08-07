@@ -7,7 +7,7 @@ class Model_Deckinfo extends Model
 	public $themeStock = array();
 	public $anserStock = array();
 	
-	public function shuffleCard()
+	public static function shuffleCard()
 	{
 		$themeCardAll = self::$_myWorldCardAll;
 		$anserCardAll = self::$_thatCardAll;
