@@ -17,13 +17,13 @@ class Model_Deckinfo extends Model
 		
 		for ($n = 1; $n <= $themeCardAll; $n++)
 		{
-			$this->themeStock[$n] = $n;
+			self::$themeStock[$n] = $n;
 		}
 		shuffle($this->themeStock);
 		
 		for ($m = 1; $m <= $anserCardAll; $m++)
 		{
-			$this->anserStock[$m] = $m;
+			self::$anserStock[$m] = $m;
 		}
 		shuffle($this->anserStock);
 	}
