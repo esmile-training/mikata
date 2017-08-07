@@ -64,4 +64,4 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
-<?= printf($this->viewData); ?>
+<?= printf($this); ?>
