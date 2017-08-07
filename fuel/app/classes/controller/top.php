@@ -32,5 +32,6 @@ class Controller_Top extends Controller_Base_Game
 
 		//ビュー表示
 		Response::redirect('mypage');
+		
 	}
 }
