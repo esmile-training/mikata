@@ -19,5 +19,5 @@ function ajax_binder(data){
 </script>
 
 <div>
-	<a href="testpage">testpage</a>
+	<a href="title">タイトルへ</a>
 </div>

@@ -9,6 +9,7 @@ class Model_tableinfo extends Model
 	
 	public function picThemeCard()
 	{
-		$currentTheme = Model_Deckinfo::$themeStock[$roundCount];
+		$currentTheme = Model_Deckinfo::$themeStock[self::$roundCount];
+		self::$roundCount += 1;
 	}
 }
