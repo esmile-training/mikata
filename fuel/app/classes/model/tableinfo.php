@@ -5,7 +5,7 @@ class Model_tableinfo extends Model
 	public $roundCount = 1;
 	public $currentTheme;
 	public $currentPlayer = 0;
-	public $playerArray = array();
+	public static $playerArray = array();
 	public $thatCardArray = array();
 	public $votesArray = array();
 	
