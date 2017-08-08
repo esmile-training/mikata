@@ -1,6 +1,6 @@
 <?php
 
-class Controller_Title
+class Controller_Title extends Controller_Base_Game
 {
 	public function action_index()
 	{
