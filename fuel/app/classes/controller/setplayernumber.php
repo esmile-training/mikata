@@ -7,7 +7,7 @@ class Controller_Setplayernumber extends Controller_Base_Game
 		View_Wrap::contents('setplayernumber', $this->view_data);
 	}
 	
-	public function action_getPlayerNumber()
+	public static function action_getPlayerNumber()
 	{
 		$param = input::post();
 		//人数分の手札配列を作る処理
