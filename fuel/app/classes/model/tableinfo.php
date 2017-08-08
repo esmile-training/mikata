@@ -9,7 +9,7 @@ class Model_tableinfo extends Model
 	public $thatCardArray = array();
 	public $votesArray = array();
 	
-	public function setPlayerArrayValue($number)
+	public static function setPlayerArrayValue($number)
 	{
 		$playerArray = array($number);
 	}
