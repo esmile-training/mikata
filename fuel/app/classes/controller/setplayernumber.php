@@ -12,7 +12,7 @@ class Controller_Setplayernumber extends Controller_Base_Game
 		$param = input::post();
 		//人数分の手札配列を作る処理
 		
-		$this->Model_tableinfo::setPlayerArrayValue($$param);
+		$this->Model_tableinfo('setPlayerArrayValue()',$param);
 		//プレイヤー一覧の配列初期化用のメソッド
 		var_dump(Model_tableinfo::$playerArry);
 		exit;
