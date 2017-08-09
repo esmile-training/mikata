@@ -10,9 +10,9 @@ class Model_tableinfo extends Model
 	public $thatCardArray = array();
 	public $votesArray = array();
 	
-	public static function setPlayerArrayValue($number)
+	public static function setPlayerArrayValue($players)
 	{
-		self::$playerArray = array($number);
+		self::$playerArray = array($players[0]);
 	}
 	
 	public function picThemeCard()
