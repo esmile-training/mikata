@@ -15,8 +15,7 @@ class Controller_Setplayernumber extends Controller_Base_Game
 		Model_tableinfo::setPlayerArrayValue($param);
 		//プレイヤー一覧の配列初期化用のメソッド
 		
-		$n = count(Model_tableinfo::$playerArray);
-		var_dump($n);
+		echo count(Model_tableinfo::$playerArray);
 		exit;
 		
 		//名前入力画面に遷移
