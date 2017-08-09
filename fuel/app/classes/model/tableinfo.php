@@ -12,9 +12,11 @@ class Model_tableinfo extends Model
 	
 	public static function setPlayerArrayValue($players = array())
 	{
+		$n = 1;
 		foreach ($players as $value)
 		{
-			self::$playerArray = $value;
+			self::$playerArray[$n] = $value;
+			$n++;
 		}
 	}
 	
