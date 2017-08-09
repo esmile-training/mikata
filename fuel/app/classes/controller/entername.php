@@ -18,6 +18,7 @@ class Controller_entername extends Controller_Base_Game
 		
 		//山札から手札を配る
 		Model_Handinfo::createPlayerHand();
+		var_dump("bbb");
 		var_dump(Model_Handinfo::$handarray);
 		exit;
 		
