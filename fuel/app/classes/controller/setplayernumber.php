@@ -12,7 +12,7 @@ class Controller_Setplayernumber extends Controller_Base_Game
 		$param = input::post();
 		//人数分の手札配列を作る処理
 		
-		Model_tableinfo::setPlayerArrayValue($param);
+		Model_tableinfo::setPlayerArrayValue($param['player']);
 		//プレイヤー一覧の配列初期化用のメソッド
 		
 		echo count(Model_tableinfo::$playerArray);
