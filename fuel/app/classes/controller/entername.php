@@ -14,6 +14,8 @@ class Controller_entername extends Controller_Base_Game
 		//プレイヤー名を配列に格納
 		Model_tableinfo::setPlayerArrayValue($param);
 		
+		Model_Deckinfo::shuffleCard();
+		
 		//山札から手札を配る
 		Model_Handinfo::createPlayerHand();
 		var_dump(Model_Handinfo::$handarray);
