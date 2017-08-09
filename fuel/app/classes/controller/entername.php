@@ -10,7 +10,7 @@ class Controller_entername extends Controller_Base_Game
 	public function action_setPlayerName()
 	{
 		$param = input::post();
-		
+		var_dump(Model_tableinfo::$playerNumber);
 		//プレイヤー名を配列に格納
 		Model_tableinfo::setPlayerArrayValue($param);
 		
