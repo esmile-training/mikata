@@ -10,8 +10,8 @@ class Model_Handinfo extends Fuel\Core\Model
 		{
 			for($m = 1; $m = Model_tableinfo::$playerNumber; $m++)
 			{
-				self::$handarray[$m][$n] = array_shift(Model_Deckinfo::$anserStock);
-				var_dump(self::$handarray[$m][$n]);
+				//self::$handarray[$m][$n] = array_shift(Model_Deckinfo::$anserStock);
+				var_dump(array_shift(Model_Deckinfo::$anserStock));
 			}
 		}
 		exit;
