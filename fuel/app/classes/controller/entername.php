@@ -19,7 +19,7 @@ class Controller_entername extends Controller_Base_Game
 		
 		//山札から手札を配る
 		Model_Handinfo::createPlayerHand();
-		Model_Deckinfo::$anserStock;
+		print_r(Model_Deckinfo::$anserStock);
 		print_r(Model_Handinfo::$handarray);
 		exit;
 		//一番目のプレイヤーの待機画面に遷移
