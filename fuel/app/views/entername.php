@@ -8,4 +8,4 @@
 	<?=	Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 	<?=	Form::close(); ?>
 </div>
-<?= printf(Model_tableinfo::$playerNumber); ?>
+<?= var_dump(Model_tableinfo::$playerNumber);?>
