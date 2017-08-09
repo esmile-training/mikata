@@ -13,5 +13,7 @@ class Model_Handinfo extends Fuel\Core\Model
 				self::$handarray[$m][$n] = array_shift(Model_Deckinfo::$anserStock);
 			}
 		}
+		print_r(self::$handarray);
+		exit;
 	}
 }
