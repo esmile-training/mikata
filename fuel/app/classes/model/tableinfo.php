@@ -12,7 +12,8 @@ class Model_tableinfo extends Model
 	public static function setPlayerArrayValue($number)
 	{
 		self::$playerArray = array($number);
-		return self::$playerArray;
+		echo count(self::$playerArray);
+		exit;
 	}
 	
 	public function picThemeCard()
