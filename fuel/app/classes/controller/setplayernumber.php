@@ -15,7 +15,7 @@ class Controller_Setplayernumber extends Controller_Base_Game
 		Model_tableinfo::$playerNumber = $param['player'];
 		
 		//名前入力画面に遷移
-		Response::redirect('entername');
-		//View_Wrap::contents('entername',$this->view_data);
+		//Response::redirect('entername');	//テキストボックスが生成されない
+		View_Wrap::contents('entername',$this->view_data);
 	}
 }
