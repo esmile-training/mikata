@@ -21,7 +21,6 @@ class Controller_entername extends Controller_Base_Game
 		Model_Handinfo::createPlayerHand();
 		
 		var_dump(Model_tableinfo::$playerNumber);
-		exit;
 		//一番目のプレイヤーの待機画面に遷移
 		Response::redirect('testpage');
 	}
