@@ -8,11 +8,9 @@ class Model_Handinfo extends Fuel\Core\Model
 	{	
 		for($n = 1; $n <= 12; $n++)
 		{
-			for($m = 1; $m = Model_tableinfo::$playerNumber; $m++)
+			for($m = 1; $m <= Model_tableinfo::$playerNumber; $m++)
 			{
-				//self::$handarray[$m][$n] = array_shift(Model_Deckinfo::$anserStock);
-				printf("aaa");
-				print_r(Model_Deckinfo::$anserStock[1]);
+				self::$handarray[$m][$n] = array_shift(Model_Deckinfo::$anserStock);
 			}
 		}
 	}
