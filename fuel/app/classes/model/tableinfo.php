@@ -12,6 +12,7 @@ class Model_tableinfo extends Model
 	public static function setPlayerArrayValue($number)
 	{
 		self::$playerArray = array($number);
+		self::$playerArray = array('1' => 'aaa','2' => 'bbb','3' => 'ccc','4' => 'ddd');
 		echo count(self::$playerArray);
 		exit;
 	}
