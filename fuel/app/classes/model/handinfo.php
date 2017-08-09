@@ -15,6 +15,5 @@ class Model_Handinfo extends Fuel\Core\Model
 				print_r(Model_Deckinfo::$anserStock[1]);
 			}
 		}
-		exit;
 	}
 }

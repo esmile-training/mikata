@@ -20,7 +20,6 @@ class Controller_entername extends Controller_Base_Game
 		Model_Handinfo::createPlayerHand();
 		printf("bbb");
 		print_r(Model_Handinfo::$handarray);
-		exit;
 		
 		//一番目のプレイヤーの待機画面に遷移
 		Response::redirect('testpage');
