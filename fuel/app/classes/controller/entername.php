@@ -7,10 +7,10 @@ class Controller_entername extends Controller_Base_Game
 		View_Wrap::contents('entername',$this->view_data);
 	}
 	
-	public function action_setPlayerName()
+	public static function action_setPlayerName()
 	{
 		$param = input::post();
-		var_dump(Model_tableinfo::$playerNumber);
+		var_dump(Model_tableinfo::$playerNumber);	//この時点でもうnullになっている
 		exit;
 		//プレイヤー名を配列に格納
 		Model_tableinfo::setPlayerArrayValue($param);
