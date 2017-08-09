@@ -10,9 +10,9 @@ class Controller_entername extends Controller_Base_Game
 	public function action_setPlayerName()
 	{
 		$param = input::post();
-		var_dump($param);
+		printf($param);
 		Model_tableinfo::setPlayerArrayValue($param);
-		var_dump(Model_tableinfo::$playerArray);
+		print_r(Model_tableinfo::$playerArray);
 		exit;
 	}
 }
