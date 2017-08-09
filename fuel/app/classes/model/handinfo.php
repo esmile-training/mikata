@@ -14,5 +14,6 @@ class Model_Handinfo extends Fuel\Core\Model
 				var_dump(self::$handarray[$m][$n]);
 			}
 		}
+		exit;
 	}
 }
