@@ -11,10 +11,10 @@ class Controller_entername extends Controller_Base_Game
 	{
 		$param = input::post();
 		
+		//プレイヤー名を配列に格納
 		Model_tableinfo::setPlayerArrayValue($param);
-		print_r(Model_tableinfo::$playerArray);
-		print_r(count(Model_tableinfo::$playerArray));
-		//print_r(count(Model_tableinfo::$playerArray[0]));
-		exit;
+		
+		//一番目のプレイヤーの待機画面に遷移
+		Response::redirect('testpage');
 	}
 }
