@@ -2,7 +2,7 @@
 
 class Model_Handinfo extends Fuel\Core\Model
 {
-	public static $handarray = array();
+	public static $handarray = array(array());
 	
 	public static function createPlayerHand()
 	{	
