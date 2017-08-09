@@ -27,9 +27,4 @@ class Model_Deckinfo extends Model
 		}
 		shuffle(self::$anserStock);
 	}
-	
-	public static function distributeCard()
-	{
-		
-	}
 }
