@@ -22,6 +22,7 @@ class Controller_entername extends Controller_Base_Game
 		
 		var_dump(Model_tableinfo::$playerNumber);
 		//一番目のプレイヤーの待機画面に遷移
-		Response::redirect('testpage');
+		//Response::redirect('testpage');
+		View_Wrap::contents('testpage');
 	}
 }
