@@ -14,7 +14,7 @@ class Model_tableinfo extends Model
 	{
 		foreach ($players as $value)
 		{
-			self::$playerArray = value;
+			self::$playerArray = $value;
 		}
 	}
 	
