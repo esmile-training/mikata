@@ -3,7 +3,7 @@
 <?= Form::open(array('action' => 'entername/setPlayerName', 'method' => 'post'));
 	for ($n = 1; $n <= Model_tableinfo::$playerNumber; $n++)
 	{
-		print_r('プレイヤー'.$n.'.<input type="text"><br>');
+		print_r('プレイヤー'.$n.' <input type="text"><br>');
 	}
 ?>
 </div>
