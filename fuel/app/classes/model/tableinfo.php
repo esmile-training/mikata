@@ -5,6 +5,7 @@ class Model_tableinfo extends Model
 	public $roundCount = 1;
 	public $currentTheme;
 	public $currentPlayer = 0;
+	public $playerNumber;
 	public static $playerArray = array();
 	public $thatCardArray = array();
 	public $votesArray = array();
@@ -12,9 +13,6 @@ class Model_tableinfo extends Model
 	public static function setPlayerArrayValue($number)
 	{
 		self::$playerArray = array($number);
-		print_r($number);
-		echo count(self::$playerArray);
-		exit;
 	}
 	
 	public function picThemeCard()
