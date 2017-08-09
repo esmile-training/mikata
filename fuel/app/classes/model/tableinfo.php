@@ -12,7 +12,10 @@ class Model_tableinfo extends Model
 	
 	public static function setPlayerArrayValue($players = array())
 	{
-		self::$playerArray = array($players);
+		foreach ($players as $value)
+		{
+			self::$playerArray = value;
+		}
 	}
 	
 	public function picThemeCard()
