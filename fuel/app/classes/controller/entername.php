@@ -14,7 +14,7 @@ class Controller_entername extends Controller_Base_Game
 		Model_tableinfo::setPlayerArrayValue($param);
 		print_r(Model_tableinfo::$playerArray);
 		print_r(count(Model_tableinfo::$playerArray));
-		print_r(count(Model_tableinfo::$playerArray[0]));
+		//print_r(count(Model_tableinfo::$playerArray[0]));
 		exit;
 	}
 }
