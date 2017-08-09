@@ -5,6 +5,6 @@
 	{
 		print_r('プレイヤー'.$n.' <input type="text"><br>');
 	}
-	Form::button(null, '決定', array('type'=>'submit', 'style'=>'padding: 2px;'));
+	Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;'));
 	Form::close(); ?>
 </div>
