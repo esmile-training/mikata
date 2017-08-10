@@ -13,6 +13,11 @@ class Model_tableinfo extends Model
 	//最初から初期化してある変数は読み込める
 	public static $staval = 5;
 	
+	public static function setPlayerNumber($number)
+	{
+		self::$playerNumber = $number;
+	}
+	
 	public static function setPlayerArrayValue($players = array())
 	{
 		$n = 1;

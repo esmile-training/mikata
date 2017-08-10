@@ -12,7 +12,7 @@ class Controller_Setplayernumber extends Controller_Base_Game
 		$param = input::post();
 
 		//人数を変数に格納
-		Model_tableinfo::$playerNumber = $param['player'];
+		Model_tableinfo::setPlayerNumber($param['player']);
 		
 		//名前入力画面に遷移
 		//Response::redirect('entername');	//テキストボックスが生成されない
