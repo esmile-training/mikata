@@ -6,12 +6,9 @@ class Model_Handinfo extends Fuel\Core\Model
 	
 	public static function createPlayerHand()
 	{	
-		var_dump(count(Model_tableinfo::$playerArray));
-		exit;
-		
 		for($n = 1; $n <= 12; $n++)
 		{
-			for($m = 1; $m <= Model_tableinfo::$playerNumber; $m++)
+			for($m = 1; $m <= count(Model_tableinfo::$playerArray); $m++)
 			{
 				self::$handarray[$m][$n] = array_shift(Model_Deckinfo::$anserStock);
 			}
