@@ -1,5 +1,5 @@
 <?php
 
 class Model_Gamemaster {
-	public $game;
+	public static $game;
 }
