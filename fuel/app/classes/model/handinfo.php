@@ -6,8 +6,7 @@ class Model_Handinfo extends Fuel\Core\Model
 	
 	public static function createPlayerHand()
 	{	
-		var_dump(Model_tableinfo::$playerNumber);
-		var_dump(Model_tableinfo::$playerArray);
+		var_dump(count(Model_tableinfo::$playerArray));
 		exit;
 		
 		for($n = 1; $n <= 12; $n++)
