@@ -21,9 +21,6 @@ class Model_Handinfo extends Fuel\Core\Model
 		$box;
 		foreach(self::$handarray as $name)
 		{
-			//頭から1枚づつ捨てる処理
-			$box = array_shift(self::$handarray[$name]);
-			
 			//山札から引く処理
 			self::$handarray[$name][self::$handall] = array_shift(Model_Deckinfo::$anserStock);
 		}
