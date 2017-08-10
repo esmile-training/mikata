@@ -21,6 +21,7 @@ class Controller_entername extends Controller_Base_Game
 		Model_Handinfo::createPlayerHand();
 		
 		//一番目のプレイヤーの待機画面に遷移
-		Response::redirect('testpage');
+		//Response::redirect('testpage');	//実験的にコメントアウト
+		View_Wrap::contents('testpage', $this->view_data);	//実験的に記述
 	}
 }

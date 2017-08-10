@@ -10,7 +10,7 @@ class Model_tableinfo extends Model
 	public $thatCardArray = array();
 	public $votesArray = array();
 	
-	//staticしてない変数はそもそも他のところで呼び出せない
+	//最初から初期化してある変数は読み込める
 	public static $staval = 5;
 	
 	public static function setPlayerArrayValue($players = array())
