@@ -64,4 +64,6 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
-<?= print_r(Model_Handinfo::$handarray); ?>
+<?= print_r("<pre>");
+	print_r(Model_Handinfo::$handarray); 
+	echo "</pre>"; ?>
