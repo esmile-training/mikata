@@ -5,13 +5,10 @@ class Model_tableinfo extends Model
 	public $roundCount = 1;
 	public $currentTheme;
 	public $currentPlayer = 0;
-	public static $playerNumber = 0;
+	public static $playerNumber;
 	public static $playerArray = array();
 	public $thatCardArray = array();
 	public $votesArray = array();
-	
-	//最初から初期化してある変数は読み込める
-	public static $staval = 5;
 	
 	public static function setPlayerNumber($number)
 	{
