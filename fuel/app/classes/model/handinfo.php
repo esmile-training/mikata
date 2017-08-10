@@ -18,6 +18,7 @@ class Model_Handinfo extends Fuel\Core\Model
 	
 	public static function picThatCard()
 	{
+		var_dump(self::$handarray);
 		foreach(self::$handarray as $key)
 		{
 			var_dump($key);
