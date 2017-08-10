@@ -53,9 +53,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::open(array('action' => 'testpage/picthatcard', 'method' => 'post'));?>
 <?= Form::button(null, '一枚引く', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 <?= Form::close(); ?>
-<?= print_r($game['player']); ?>
-<?= print_r(); ?>
 
 <?= print_r("<pre>");
-	print_r($game['hand']); 
+	print_r($user); 
 	echo "</pre>"; ?>
