@@ -10,6 +10,9 @@ class Model_tableinfo extends Model
 	public $thatCardArray = array();
 	public $votesArray = array();
 	
+	public static $staval = 5;
+	public $pubval = 10;
+	
 	public static function setPlayerArrayValue($players = array())
 	{
 		$n = 1;
