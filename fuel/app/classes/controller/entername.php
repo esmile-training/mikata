@@ -20,7 +20,7 @@ class Controller_entername extends Controller_Base_Game
 		//山札から手札を配る
 		Model_Handinfo::createPlayerHand();
 		
-		var_dump($this->view_data);
+		print_r($this->view_data);
 		exit;
 		//一番目のプレイヤーの待機画面に遷移
 		//Response::redirect('testpage');	//実験的にコメントアウト
