@@ -17,8 +17,8 @@ class Controller_Testpage extends Controller_Base_Game
 	
 	public function action_picthatcard()
 	{
-//		print_r(Model_Handinfo::$handarray);
-//		exit;
+		print_r(Model_tableinfo::$playerArray);
+		exit;
 //		Model_Handinfo::picThatCard();
 		Response::redirect('testpage');
 	}
