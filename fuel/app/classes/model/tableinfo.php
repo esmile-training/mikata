@@ -5,7 +5,7 @@ class Model_tableinfo extends Model
 	public $roundCount = 1;
 	public $currentTheme;
 	public $currentPlayer = 0;
-	public static $playerNumber;
+	public static $playerNumber = 0;
 	public static $playerArray = array();
 	public $thatCardArray = array();
 	public $votesArray = array();
@@ -16,8 +16,6 @@ class Model_tableinfo extends Model
 	public static function setPlayerNumber($number)
 	{
 		self::$playerNumber = $number;
-		var_dump(self::$playerNumber);
-		exit;
 	}
 	
 	public static function setPlayerArrayValue($players = array())
