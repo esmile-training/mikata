@@ -16,7 +16,7 @@ class Model_tableinfo extends Model
 	public static function setPlayerNumber($number)
 	{
 		self::$playerNumber = $number;
-		ver_dump(self::$playerNumber);
+		var_dump(self::$playerNumber);
 		exit;
 	}
 	
