@@ -45,21 +45,6 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <div>
-	<?= Form::open(array('action' => 'testpage/selectPlayer', 'method' => 'post'));?>
-		<select name= player>
-		<option value= 3>3人</option>
-		<option value= 4>4人</option>
-		<option value= 5>5人</option>
-		<option value= 6>6人</option>
-		<option value= 7>7人</option>
-		<option value= 8>8人</option>
-		<option value= 9>9人</option>
-		</select>
-	<?= Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
-	<?= Form::close(); ?>
-</div>
-
-<div>
 	<p><a class="modal_btn def">クリックするとdefモーダルウィンドウを開きます。</a></p>
 </div>
 
@@ -68,6 +53,8 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::open(array('action' => 'testpage/picthatcard', 'method' => 'post'));?>
 <?= Form::button(null, '一枚引く', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 <?= Form::close(); ?>
+<?= print_r(Model_tableinfo::$playerNumber); ?>
+<?= print_r(Model_tableinfo::$playerArray); ?>
 
 <?= print_r("<pre>");
 	print_r(Model_Handinfo::$handarray); 
