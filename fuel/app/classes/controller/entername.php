@@ -22,7 +22,7 @@ class Controller_entername extends Controller_Base_Game
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
 		
-		Model_Gamemaster::$game = $this->game;
+		$this->view_data['game'] = $this->game;
 		
 		//一番目のプレイヤーの待機画面に遷移
 		//Response::redirect('testpage');	//実験的にコメントアウト
