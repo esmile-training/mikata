@@ -3,7 +3,7 @@ class Controller_Base_Game extends Controller
 {
 	public $view_data;
 	public $user;
-	public $game;
+	public $game;	//実験的に追加
 
 	public function __construct()
 	{
