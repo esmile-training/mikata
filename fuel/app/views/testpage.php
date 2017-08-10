@@ -66,4 +66,3 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
 <?= var_dump(Model_tableinfo::$playerNumber); ?>
 <?= var_dump(Model_tableinfo::$staval); ?>
-<?= var_dump(Model_tableinfo::$pubval); ?>
