@@ -18,10 +18,12 @@ class Model_Handinfo extends Fuel\Core\Model
 	
 	public static function picThatCard()
 	{
-		foreach(self::$handarray as $key => $value)
+		foreach(self::$handarray as $key)
 		{
-			echo $value;
-			exit;
+			foreach ($key as $value) {
+				echo $value;
+				exit;
+			}
 			//山札から引く処理
 			self::$handarray[$value][12] = array_shift(Model_Deckinfo::$anserStock);
 		}
