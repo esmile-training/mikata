@@ -14,4 +14,10 @@ class Controller_Testpage extends Controller_Base_Game
 		//ビュー表示
 		Response::redirect('inputname');
 	}
+	
+	public function action_picthatcard()
+	{
+		Model_Handinfo::picThatCard();
+		Response::redirect('testpage');
+	}
 }
