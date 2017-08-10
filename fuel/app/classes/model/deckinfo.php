@@ -26,5 +26,7 @@ class Model_Deckinfo extends Model
 			self::$anserStock[$m] = $m;
 		}
 		shuffle(self::$anserStock);
+		
+		return array(self::$themeStock, self::$anserStock);
 	}
 }

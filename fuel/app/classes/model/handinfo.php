@@ -14,6 +14,7 @@ class Model_Handinfo extends Fuel\Core\Model
 				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$anserStock);
 			}
 		}
+		return self::$handarray;
 	}
 	
 	public static function picThatCard()

@@ -23,6 +23,7 @@ class Model_tableinfo extends Model
 			self::$playerArray[$n] = $value;
 			$n++;
 		}
+		return self::$playerArray;
 	}
 	
 	public function picThemeCard()
