@@ -18,7 +18,7 @@ class Controller_Testpage extends Controller_Base_Game
 	{
 //		Model_Handinfo::picThatCard();
 		//Response::redirect('testpage');
-		print_r($this->view_data['game']);
+		print_r($this->view_data);
 		exit;
 		View_Wrap::contents('testpage', $this->view_data);
 	}
