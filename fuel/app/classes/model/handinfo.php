@@ -20,9 +20,9 @@ class Model_Handinfo extends Fuel\Core\Model
 	{
 		foreach(self::$handarray as $key)
 		{
+			var_dump($key);
 			foreach ($key as $value)
 			{
-				var_dump($key);
 				var_dump($value);
 				//山札から引く処理
 				//self::$handarray[$value][12] = array_shift(Model_Deckinfo::$anserStock);
