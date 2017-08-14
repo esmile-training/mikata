@@ -23,10 +23,9 @@ class Controller_entername extends Controller_Base_Game
 		$this->view_data['game'] = $this->game;
                 
                 print_r ($this->view_data['game']);
-                exit;
                 
 		//一番目のプレイヤーの待機画面に遷移
-		Response::redirect('testpage');	//実験的にコメントアウト
-		//View_Wrap::contents('testpage', $this->view_data, $this->game);	//実験的に記述
+		//Response::redirect('testpage');	//実験的にコメントアウト
+		View_Wrap::contents('testpage', $this->view_data, $this->game);	//実験的に記述
 	}
 }
