@@ -55,4 +55,4 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::close(); ?>
 
 <?= $user['name']; ?>
-<?= $game; ?>
+<?= $game['player']; ?>
