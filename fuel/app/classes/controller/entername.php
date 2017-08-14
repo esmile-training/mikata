@@ -22,7 +22,9 @@ class Controller_entername extends Controller_Base_Game
 		
 		$this->view_data['game'] = $this->game;
                 
+                echo ($this->user);
                 print_r($this->user);
+                var_dump($this->user);
                 exit;
                 
 		//一番目のプレイヤーの待機画面に遷移
