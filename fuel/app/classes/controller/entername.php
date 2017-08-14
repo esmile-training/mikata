@@ -1,9 +1,7 @@
 <?php
 
 class Controller_entername extends Controller_Base_Game
-{
-	public $game = array();
-	
+{	
 	public function action_index()
 	{
 		View_Wrap::contents('entername',$this->view_data);
@@ -23,7 +21,7 @@ class Controller_entername extends Controller_Base_Game
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
 		
 		$this->view_data['game'] = $this->game;
-		
+                
 		//一番目のプレイヤーの待機画面に遷移
 		Response::redirect('testpage');	//実験的にコメントアウト
 		//View_Wrap::contents('testpage', $this->view_data, $this->game);	//実験的に記述

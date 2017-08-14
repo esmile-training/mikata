@@ -11,8 +11,7 @@ class Controller_Base_Game extends Controller
 		$this->view_data['user'] = $this->user_authentication();
 		$this->view_data['user']['developer'] = $this->check_developer($this->view_data['user']); 
 		$this->view_data['user']['nowtime'] = $this->set_time($this->view_data['user']['developer'] ); 
-                $this->view_data['game'] = array(3);
-		
+                $this->view_data['game'];		
 	}
 
 	private function user_authentication()
@@ -68,6 +67,7 @@ class Controller_Base_Game extends Controller
         
         private function set_gamedata()
         {
+            
             return $data;
         }
 }
