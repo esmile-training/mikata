@@ -3,7 +3,7 @@ class Controller_Base_Game extends Controller
 {
 	public $view_data;
 	public $user;
-	public $game;	//実験的に追加
+	//public $game;	//実験的に追加
 
 	public function __construct()
 	{
@@ -11,7 +11,7 @@ class Controller_Base_Game extends Controller
 		$this->view_data['user'] = $this->user_authentication();
 		$this->view_data['user']['developer'] = $this->check_developer($this->view_data['user']); 
 		$this->view_data['user']['nowtime'] = $this->set_time($this->view_data['user']['developer'] ); 
-                $this->view_data['game'] = $this->set_gamedata();
+                $this->view_data['game'] = array();
 	}
 
 	private function user_authentication()
