@@ -27,6 +27,5 @@ class Model_Handinfo extends Model
 				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$anserStock);
 			}
 		}
-		exit;
 	}
 }
