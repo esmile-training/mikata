@@ -4,6 +4,8 @@ class Controller_Testpage extends Controller_Base_Game
 {
 	public function action_index()
 	{
+                print_r($this->view_data);
+                exit;
 		View_Wrap::contents('testpage', $this->view_data);
 	}
 	
