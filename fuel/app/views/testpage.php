@@ -55,5 +55,5 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::close(); ?>
 
 <?= 
-    print_r(Model_tableinfo::$playerArray); 
+    print_r($view_data);
 ?>
