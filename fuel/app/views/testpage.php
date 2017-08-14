@@ -55,7 +55,5 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::close(); ?>
 
 <?= 
-    print_r("<PRE>");
-    print_r($user); 
-    print_r("</PRE>");
+    print_r(Model_tableinfo::$playerArray); 
 ?>

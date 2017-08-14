@@ -6,7 +6,7 @@ class Model_tableinfo extends Model
 	public $currentTheme;
 	public $currentPlayer = 0;
 	public static $playerNumber;
-	public static $playerArray = array();
+	protected static $playerArray = array();
 	public $thatCardArray = array();
 	public $votesArray = array();
 	
