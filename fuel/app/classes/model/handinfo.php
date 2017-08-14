@@ -1,6 +1,6 @@
 <?php
 
-class Model_Handinfo extends Fuel\Core\Model
+class Model_Handinfo extends Model
 {
 	public static $handarray = array(array());
 	static $handall = 12;
