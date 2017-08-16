@@ -24,7 +24,7 @@ class Controller_Testpage extends Controller_Base_Game
 		}
 		
 		$game['table'] = array('status' => $param['status'], 'thatCardArray' => $param['thatCardArray'], 'votesArray' => $param['votesArray'],'player' => $param['player'], 'deck'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
-		print_r($game);exit;
+		
 		foreach ($game['table']['player'] as $value)
 		{
 			$game['hand'][$value] = $param[$value];
