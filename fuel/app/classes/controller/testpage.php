@@ -23,7 +23,7 @@ class Controller_Testpage extends Controller_Base_Game
 			$param[$key] = explode(",",$value);
 		}
 		
-		$game['table'] = array('status' => $param['status'], 'thatCardArray' => $param['thatCardArray'], 'votesArray' => $param['votesArray'],'player' => $param['player']);
+		$game['table'] = array('status' => $param['status'], 'thatCardArray' => $param['thatCardArray'], 'votesArray' => $param['votesArray'],'player' => $param['player'],'playerScoreArray' => $param['playerScoreArray']);
 		$game['deck'] = array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']);
 		
 		foreach ($game['table']['player'] as $value)
