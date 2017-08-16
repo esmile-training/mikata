@@ -49,7 +49,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 </div>
 
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
-<?= print_r($game);exit; ?>
+	
 <?= Form::open(array('action' => 'testpage/picthatcard', 'method' => 'post'));?>
 <?= Form::hidden('status', implode(',', $game['table']['status'])); ?>
 <?= Form::hidden('thatCardArray', implode(',', $game['table']['thatCardArray'])); ?>
