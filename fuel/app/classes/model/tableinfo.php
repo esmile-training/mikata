@@ -7,6 +7,7 @@ class Model_tableinfo extends Model
 	public static $currentPlayer = 0;
 	public static $playerNumber;
 	public static $playerArray = array();
+	public static $playerScoreArray = array();
 	public static $thatCardArray = array();
 	public static $votesArray = array();
 	
@@ -26,6 +27,12 @@ class Model_tableinfo extends Model
 		return self::$playerArray;
 	}
 	
+	public static function  setScoreArray()
+	{
+		self::$playerScoreArray = array(self::$playerNumber);
+		return self::$playerScoreArray;
+	}
+
 	public static function setThatArray()
 	{
 		self::$thatCardArray = array(self::$playerNumber);

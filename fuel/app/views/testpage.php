@@ -55,6 +55,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::hidden('thatCardArray', implode(',', $game['table']['thatCardArray'])); ?>
 <?= Form::hidden('votesArray', implode(',', $game['table']['votesArray'])); ?>
 <?= Form::hidden('player', implode(",",$game['table']['player'])); ?>
+<?= Form::hidden('playerScoreArray', implode(",",$game['table']['playerScoreArray'])); ?>
 <?= Form::hidden('themeStock', implode(",",$game['deck']['themeStock'])); ?>
 <?= Form::hidden('anserStock', implode(",",$game['deck']['anserStock'])); ?>
 <?php foreach ($game['table']['player'] as $value) 

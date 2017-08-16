@@ -20,6 +20,8 @@ class Controller_entername extends Controller_Base_Game
 		//プレイヤー名を配列に格納
 		$this->game['table']['player'] = Model_tableinfo::setPlayerArrayValue($param);
 		
+		$this->game['table']['playerScoreArray'] = Model_tableinfo::setScoreArray();
+		
 		//山札をシャッフルする
 		$this->game['deck'] = Model_Deckinfo::shuffleCard();
 		
