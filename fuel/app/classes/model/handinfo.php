@@ -1,6 +1,6 @@
 <?php
 
-class Model_Handinfo extends Fuel\Core\Model
+class Model_Handinfo extends Model
 {
 	public static $handarray = array(array());
 	static $handall = 12;
@@ -27,6 +27,5 @@ class Model_Handinfo extends Fuel\Core\Model
 				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$anserStock);
 			}
 		}
-		exit;
 	}
 }
