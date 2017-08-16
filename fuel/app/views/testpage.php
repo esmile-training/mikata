@@ -54,7 +54,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::hidden('player', implode("\t",$game['player'])); ?>
 <?= Form::hidden('card', implode("\t",$game['card']['themeStock'])); ?>
 <?= Form::hidden('card', implode("\t",$game['card']['anserStock'])); ?>
-<?= Form::hidden('hand', implode("\t",$game['hand'])); ?>
+<?= Form::hidden('hand', implode("\t",$game['hand']['chino'])); ?>
 <?= Form::button(null, '一枚引く', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 <?= Form::close(); ?>
 
