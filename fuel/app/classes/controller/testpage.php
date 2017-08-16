@@ -17,7 +17,7 @@ class Controller_Testpage extends Controller_Base_Game
 	public function action_picthatcard()
 	{
 		$param = input::post();
-		
+		print_r($param);exit;
 		foreach ($param as $key => $value) 
 		{
 			$param[$key] = explode(",",$value);
