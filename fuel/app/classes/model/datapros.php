@@ -2,7 +2,7 @@
 
 class Model_datapros extends Model
 {
-	public static function imploadGameArray($game = array())
+	public static function imploadGameArray($game = array(array()))
 	{
 		$param['player'] = implode(",",$game['player']);
 		$param['themeStock'] = implode(",",$game['card']['themeStock']);
