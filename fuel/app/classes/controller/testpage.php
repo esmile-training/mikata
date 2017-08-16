@@ -17,7 +17,7 @@ class Controller_Testpage extends Controller_Base_Game
 	public function action_picthatcard()
 	{
 		$param = input::post();
-		$game = array('player' => $param[player], 'card'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
+		$game = array('player' => $param['player'], 'card'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
 		$this->view_data['game'] = $param;
 //		print_r($param);
 //		exit;
