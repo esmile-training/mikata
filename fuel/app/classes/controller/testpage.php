@@ -17,9 +17,9 @@ class Controller_Testpage extends Controller_Base_Game
 	public function action_picthatcard()
 	{
 		$param = input::post();
-		
-		print_r($param);
-		exit;
+		$this->view_data['game'] = $param;
+//		print_r($param);
+//		exit;
 		
 		//Model_Handinfo::picThatCard();
 		//Response::redirect('testpage');
