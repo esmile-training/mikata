@@ -17,13 +17,13 @@ class Controller_Testpage extends Controller_Base_Game
 	public function action_picthatcard()
 	{
 		$param = input::post();
-
+		print_r($param);
+		exit;
+		
 		foreach ($param as $key => $value) 
 		{
 			$param[$key] = explode(",",$value);
 		}
-		print_r($param);
-		exit;
 		
 		$game['table'] = array('status' => $param['status'], 'thatCardArray' => $param['thatCardArray'], 'votesArray' => $param['votesArray'],'player' => $param['player'], 'deck'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
 		foreach ($game['table']['player'] as $value)
