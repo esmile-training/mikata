@@ -26,11 +26,16 @@ class Model_tableinfo extends Model
 		return self::$playerArray;
 	}
 	
-	public static function setThatVotesArray()
+	public static function setThatArray()
 	{
 		self::$thatCardArray = array(self::$playerNumber);
+		return self::$thatCardArray;
+	}
+	
+	public static function setVotesArray()
+	{
 		self::$votesArray = array(self::$playerNumber);
-		return array('thatCardArray' => self::$thatCardArray, 'votesArray' => self::$votesArray );
+		return self::$votesArray;
 	}
 
 	public function picThemeCard()
