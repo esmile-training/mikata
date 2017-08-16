@@ -19,6 +19,7 @@ class Controller_Testpage extends Controller_Base_Game
 		$param = input::post();
 		foreach ($param as $key => $value) 
 		{
+			print_r($value);
 			$param[$key] = explode(" ",$value);
 			print_r($param[$key]);
 		}
