@@ -1,6 +1,6 @@
 <?php
 
-class Model_formData extends Model
+class Model_datapros extends Model
 {
 	public static $test;
 	
