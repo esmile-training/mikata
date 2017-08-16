@@ -19,8 +19,8 @@ class Controller_Testpage extends Controller_Base_Game
 		$param = input::post();
 		$game = array('player' => $param['player'], 'card'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
 		$this->view_data['game'] = $game;
-//		print_r($param);
-//		exit;
+		print_r($game);
+		exit;
 		
 		//Model_Handinfo::picThatCard();
 		//Response::redirect('testpage');
