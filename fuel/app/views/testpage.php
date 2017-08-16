@@ -51,7 +51,7 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
 
 <?= Form::open(array('action' => 'testpage/picthatcard', 'method' => 'post'));?>
-<?= Form::hidden('id', $game['player'], array('id' => 'hidden_id', 'class' => 'hidden_class')); ?>
+<?= Form::hidden('id', $game['player']['cocoa'], array('id' => 'hidden_id', 'class' => 'hidden_class')); ?>
 <?= Form::button(null, '一枚引く', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 <?= Form::close(); ?>
 
