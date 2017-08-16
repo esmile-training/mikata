@@ -9,19 +9,19 @@ class Model_Deckinfo extends Model
 	
 	public static function shuffleCard()
 	{
-		$themeCardAll = self::$_myWorldCardAll - 1;
-		$anserCardAll = self::$_thatCardAll - 1;
+		$themeCardAll = self::$_myWorldCardAll;
+		$anserCardAll = self::$_thatCardAll;
 		
 		self::$themeStock = array($themeCardAll);
 		self::$anserStock = array($anserCardAll);
 		
-		for ($n = 0; $n <= $themeCardAll; $n++)
+		for ($n = 1; $n <= $themeCardAll; $n++)
 		{
 			self::$themeStock[$n] = $n;
 		}
 		shuffle(self::$themeStock);
 		
-		for ($m = 0; $m <= $anserCardAll; $m++)
+		for ($m = 1; $m <= $anserCardAll; $m++)
 		{
 			self::$anserStock[$m] = $m;
 		}
