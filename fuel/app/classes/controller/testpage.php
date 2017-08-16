@@ -22,6 +22,10 @@ class Controller_Testpage extends Controller_Base_Game
 			$param[$key] = explode(",",$value);
 		}
 		$game = array('player' => $param['player'], 'card'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
+		foreach ($game['player'] as $value)
+		{
+			$game['hand'][$value] = $param[$value];
+		}
 		$this->view_data['game'] = $game;
 		print_r($game);
 		exit;
