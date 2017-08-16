@@ -11,11 +11,17 @@ class Controller_entername extends Controller_Base_Game
 	{
 		$param = input::post();
 
+		$this->game['table']['status'] = array('roundCount' => Model_tableinfo::$roundCount, 'currentTheme' => Model_tableinfo::$currentTheme, 'currentPlayer' => Model_tableinfo::$currentPlayer);
+		
+		$this->game['table']['thatCardArray'] = Model_tableinfo::$thatCardArray;
+		
+		$this->game['table']['votesArray'] = Model_tableinfo::$votesArray;
+		 
 		//プレイヤー名を配列に格納
-		$this->game['player'] = Model_tableinfo::setPlayerArrayValue($param);
+		$this->game['table']['player'] = Model_tableinfo::setPlayerArrayValue($param);
 		
 		//山札をシャッフルする
-		$this->game['card'] = Model_Deckinfo::shuffleCard();
+		$this->game['deck'] = Model_Deckinfo::shuffleCard();
 		
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();

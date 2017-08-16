@@ -2,13 +2,13 @@
 
 class Model_tableinfo extends Model
 {
-	public $roundCount = 1;
-	public $currentTheme;
-	public $currentPlayer = 0;
+	public static $roundCount = 1;
+	public static $currentTheme;
+	public static $currentPlayer = 0;
 	public static $playerNumber;
 	public static $playerArray = array();
-	public $thatCardArray = array();
-	public $votesArray = array();
+	public static $thatCardArray = array();
+	public static $votesArray = array();
 	
 	public static function setPlayerNumber($number)
 	{
