@@ -19,11 +19,12 @@ class Controller_Testpage extends Controller_Base_Game
 		$param = input::post();
 		foreach ($param as $key => $value) 
 		{
+			print_r($value);
 			$param[$key] = explode(" ",$value);
 		}
 		$game = array('player' => $param['player'], 'card'=>array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']));
 		$this->view_data['game'] = $game;
-		print_r($game);
+		//print_r($game);
 		exit;
 		
 		//Model_Handinfo::picThatCard();
