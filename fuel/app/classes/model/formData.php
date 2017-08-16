@@ -2,6 +2,8 @@
 
 class Model_formData extends Model
 {
+	public static $test;
+	
 	public static function imploadGameArray($game)
 	{
 		$param['player'] = implode(",",$game['player']);
