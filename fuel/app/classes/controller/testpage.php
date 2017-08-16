@@ -21,8 +21,8 @@ class Controller_Testpage extends Controller_Base_Game
 		//print_r($param);
 		//exit;
 		
-//		Model_Handinfo::picThatCard();
-		Response::redirect('testpage');
-		//View_Wrap::contents('testpage', $this->view_data);
+		//Model_Handinfo::picThatCard();
+		//Response::redirect('testpage');
+		View_Wrap::contents('testpage', $this->view_data);
 	}
 }

@@ -55,4 +55,4 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= Form::button(null, '一枚引く', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 <?= Form::close(); ?>
 
-<?= Model_Deckinfo::viewCard()//print_r($game) ?>
+<?= print_r($game) ?>
