@@ -29,4 +29,9 @@ class Model_Deckinfo extends Model
 		
 		return array("themeStock" => self::$themeStock, "anserStock" => self::$anserStock);
 	}
+	
+	public static function viewCard()
+	{
+		print_r(self::$anserStock);
+	}
 }
