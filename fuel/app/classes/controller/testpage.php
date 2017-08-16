@@ -28,7 +28,7 @@ class Controller_Testpage extends Controller_Base_Game
 		
 		foreach ($game['table']['player'] as $value)
 		{
-			$game['hand'][$value] = $param[$value];
+			$game['hand'][$value] = expload(",",$param[$value]);
 		}
 		$this->view_data['game'] = $game;
 		
