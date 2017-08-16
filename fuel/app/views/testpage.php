@@ -51,9 +51,10 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 <?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'big')); ?>
 
 <?= Form::open(array('action' => 'testpage/picthatcard', 'method' => 'post'));?>
-<?= Form::hidden('player', implode("\t",$game['table']['player'])); ?>
-<?= Form::hidden('themeStock', implode("\t",$game['deck']['themeStock'])); ?>
-<?= Form::hidden('anserStock', implode("\t",$game['deck']['anserStock'])); ?>
+<?= Form::hidden('status', implode(',', $game['table']['status'])); ?>
+<?= Form::hidden('player', implode(",",$game['table']['player'])); ?>
+<?= Form::hidden('themeStock', implode(",",$game['deck']['themeStock'])); ?>
+<?= Form::hidden('anserStock', implode(",",$game['deck']['anserStock'])); ?>
 <?php foreach ($game['table']['player'] as $value) 
 	{
 		echo Form::hidden($value, implode("\t",$game['hand'][$value]));
