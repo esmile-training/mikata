@@ -26,6 +26,13 @@ class Model_tableinfo extends Model
 		return self::$playerArray;
 	}
 	
+	public static function setThatVotesArray()
+	{
+		self::$thatCardArray = array(self::$playerNumber);
+		self::$votesArray = array(self::$playerNumber);
+		return array('thatCardArray' => self::$thatCardArray, 'votesArray' => self::$votesArray );
+	}
+
 	public function picThemeCard()
 	{
 		$currentTheme = Model_Deckinfo::$themeStock[self::$roundCount];

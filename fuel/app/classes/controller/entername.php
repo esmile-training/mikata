@@ -13,9 +13,7 @@ class Controller_entername extends Controller_Base_Game
 
 		$this->game['table']['status'] = array('roundCount' => Model_tableinfo::$roundCount, 'currentTheme' => Model_tableinfo::$currentTheme, 'currentPlayer' => Model_tableinfo::$currentPlayer);
 		
-		$this->game['table']['thatCardArray'] = Model_tableinfo::$thatCardArray;
-		
-		$this->game['table']['votesArray'] = Model_tableinfo::$votesArray;
+		$this->game['table'] = Model_tableinfo::setThatVotesArray();
 		 
 		//プレイヤー名を配列に格納
 		$this->game['table']['player'] = Model_tableinfo::setPlayerArrayValue($param);
