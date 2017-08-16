@@ -27,8 +27,8 @@ class Controller_Testpage extends Controller_Base_Game
 			$game['hand'][$value] = $param[$value];
 		}
 		$this->view_data['game'] = $game;
-		print_r($game);
-		exit;
+//		print_r($game);
+//		exit;
 		
 		//Model_Handinfo::picThatCard();
 		//Response::redirect('testpage');
