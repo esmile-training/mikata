@@ -18,8 +18,8 @@ class Controller_Testpage extends Controller_Base_Game
 	{
 		$param = input::post();
 		
-		//print_r($param);
-		//exit;
+		print_r($param);
+		exit;
 		
 		//Model_Handinfo::picThatCard();
 		//Response::redirect('testpage');
