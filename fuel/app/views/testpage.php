@@ -52,6 +52,8 @@ document.layers[obj+"i"].src=op:document.layers[obj+"i"].src=cl
 
 <?= Form::open(array('action' => 'testpage/picthatcard', 'method' => 'post'));?>
 <?= Form::hidden('status', implode(',', $game['table']['status'])); ?>
+<?= Form::hidden('thatCardArray', implode(',', $game['table']['thatCardArray'])); ?>
+<?= Form::hidden('votesArray', implode(',', $game['table']['votesArray'])); ?>
 <?= Form::hidden('player', implode(",",$game['table']['player'])); ?>
 <?= Form::hidden('themeStock', implode(",",$game['deck']['themeStock'])); ?>
 <?= Form::hidden('anserStock', implode(",",$game['deck']['anserStock'])); ?>
