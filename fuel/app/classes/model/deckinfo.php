@@ -5,15 +5,15 @@ class Model_Deckinfo extends Model
 	static $_myWorldCardAll = 90;
 	static $_thatCardAll = 392;
 	public static $themeStock = array();
-	public static $anserStock = array();
+	public static $answerStock = array();
 	
 	public static function shuffleCard()
 	{
 		$themeCardAll = self::$_myWorldCardAll;
-		$anserCardAll = self::$_thatCardAll;
+		$answerCardAll = self::$_thatCardAll;
 		
 		self::$themeStock = array($themeCardAll);
-		self::$anserStock = array($anserCardAll);
+		self::$answerStock = array($answerCardAll);
 		
 		for ($n = 1; $n <= $themeCardAll; $n++)
 		{
@@ -21,17 +21,17 @@ class Model_Deckinfo extends Model
 		}
 		shuffle(self::$themeStock);
 		
-		for ($m = 1; $m <= $anserCardAll; $m++)
+		for ($m = 1; $m <= $answerCardAll; $m++)
 		{
-			self::$anserStock[$m] = $m;
+			self::$answerStock[$m] = $m;
 		}
-		shuffle(self::$anserStock);
+		shuffle(self::$answerStock);
 		
-		return array("themeStock" => self::$themeStock, "anserStock" => self::$anserStock);
+		return array("themeStock" => self::$themeStock, "answerStock" => self::$answerStock);
 	}
 	
 	public static function viewCard()
 	{
-		print_r(self::$anserStock);
+		print_r(self::$answerStock);
 	}
 }

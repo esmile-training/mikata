@@ -24,7 +24,7 @@ class Controller_Testpage extends Controller_Base_Game
 		}
 		
 		$game['table'] = array('status' => $param['status'], 'thatCardArray' => $param['thatCardArray'], 'votesArray' => $param['votesArray'],'player' => $param['player'],'playerScoreArray' => $param['playerScoreArray']);
-		$game['deck'] = array('themeStock' => $param['themeStock'], 'anserStock' => $param['anserStock']);
+		$game['deck'] = array('themeStock' => $param['themeStock'], 'answerStock' => $param['ansewrStock']);
 		
 		foreach ($game['table']['player'] as $value)
 		{
@@ -32,7 +32,7 @@ class Controller_Testpage extends Controller_Base_Game
 		}
 		$this->view_data['game'] = $game;
 		
-		//Model_Handinfo::picThatCard();
+		Model_Handinfo::picThatCard();
 		//Response::redirect('testpage');
 		View_Wrap::contents('testpage', $this->view_data);
 	}

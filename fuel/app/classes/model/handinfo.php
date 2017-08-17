@@ -11,7 +11,7 @@ class Model_Handinfo extends Model
 		{
 			foreach(Model_tableinfo::$playerArray as $value)
 			{
-				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$anserStock);
+				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$answerStock);
 			}
 		}
 		return self::$handarray;
@@ -24,7 +24,7 @@ class Model_Handinfo extends Model
 			foreach ($key as $value)
 			{
 				//山札から引く処理
-				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$anserStock);
+				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$answerStock);
 			}
 		}
 	}
