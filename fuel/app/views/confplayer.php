@@ -6,7 +6,7 @@
 					<?= $answer['id'] ?>
 				</td>
 				<td>
-					<?= $answer['answer'] ?>
+					
 				</td>
 			</tr>
 		<?php endforeach; ?>
