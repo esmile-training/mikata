@@ -11,6 +11,8 @@ class Controller_Base_Game extends Controller
 		$this->view_data['user']['developer'] = $this->check_developer($this->view_data['user']); 
 		$this->view_data['user']['nowtime'] = $this->set_time($this->view_data['user']['developer'] ); 
         $this->view_data['game'] = array();
+		
+		$this->csv = new Model_Base_Csv();
 	}
 
 	private function user_authentication()
