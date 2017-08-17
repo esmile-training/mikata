@@ -3,7 +3,7 @@
 		<?php foreach ($mikata_answer as $answer): ?>
 			<tr>
 				<td>
-					<?= $answer['id'] ?>
+					<?= $answer['answer'] ?>
 				</td>
 				<td>
 					
