@@ -6,7 +6,8 @@
 	{
 		echo '<a class="modal_btn cfmanser">';
 		echo $mikata_answer[$value]['answer'];
-		echo '</a></br>';		
+		echo '</a></br>';
+		echo View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
 	}
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['chino'] as $value)
@@ -21,5 +22,4 @@
 		echo '</br>';
 	}
 ?>
-	<?= View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer'])); ?>
 </div>
