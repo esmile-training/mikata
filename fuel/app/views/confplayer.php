@@ -21,5 +21,5 @@
 		echo '</br>';
 	}
 ?>
-	<?= View::forge('popup/wrap', array('name' => 'cfmancer', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer'])); ?>
+	<?= View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer'])); ?>
 </div>
