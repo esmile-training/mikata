@@ -1,5 +1,5 @@
 <div>
-	<?= $mikata_answer ?>
+	<?= print_r($mikata_answer['1'])?>
 </div>
 
 <div>
