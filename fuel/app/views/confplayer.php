@@ -1,5 +1,5 @@
 <div>
-	<?= $mikata_answer[0] ?>
+	<?= $mikata_answer ?>
 </div>
 
 <div>
