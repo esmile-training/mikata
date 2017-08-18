@@ -6,7 +6,7 @@ class Controller_confPlayer extends Controller_Base_Game
 	{	
 		$table = $_SESSION['game']['table'];
 		$themeStock = $_SESSION['game']['deck']['themeStock'];
-	
+	exit;
 		print_r($table);
 		//exit;
 		
