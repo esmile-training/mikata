@@ -45,9 +45,9 @@ class Model_tableinfo extends Model
 		return self::$votesArray;
 	}
 
-	public function picThemeCard()
+	public static function picThemeCard($round, $themeStock = array())
 	{
-		$currentTheme = Model_Deckinfo::$themeStock[self::$roundCount];
-		self::$roundCount += 1;
+		$themeId = $themeDeck[$round];
+		return $themeId;
 	}
 }
