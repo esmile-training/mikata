@@ -11,17 +11,5 @@
 		echo View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
 		$i++;
 	}
-	echo '<br>';
-	foreach($_SESSION['game']['hand']['chino'] as $value)
-	{
-		echo $mikata_answer[$value]['answer'];
-		echo '</br>';
-	}
-	echo '<br>';
-	foreach($_SESSION['game']['hand']['rize'] as $value)
-	{
-		echo $mikata_answer[$value]['answer'];
-		echo '</br>';
-	}
 ?>
 </div>
