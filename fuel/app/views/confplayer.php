@@ -22,3 +22,4 @@
 	}
 ?>
 </div>
+<?= View::forge('popup/wrap', array('name' => 'def', 'size' => 'normal')); ?>
