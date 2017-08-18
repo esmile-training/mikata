@@ -1,9 +1,10 @@
 <div>
-<?php //foreach($game['hand']['chino'] as $value)
-//	{
-//		echo $mikata_answer[$value]['answer'];
-//		echo '</br>';
-//	}
+<?php 
+	foreach($_SESSION['game']['hand']['chino'] as $value)
+	{
+		echo $mikata_answer[$value]['answer'];
+		echo '</br>';
+	}
 	print_r($_SESSION['game']['table']['player']);
 ?>
 </div>
