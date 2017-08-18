@@ -4,7 +4,7 @@
 		<?= View::forge('popup/'.$name, array('popup_data'=>$popup_data)) ?>
 	<?php //引き渡しデータがない場合 ?>
 	<?php }else{ ?>
-		<?= View::forge('popup/'.$name) ?>
+		<?= View::forge('popup/'.$name.'2') ?>
 	<?php } ?>
 	<?php //ポップアップウィンドウを閉じる ?>
 	<p><a id="modal-close">閉じる</a></p>
