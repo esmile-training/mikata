@@ -32,15 +32,9 @@ class Controller_entername extends Controller_Base_Game
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
 		
-		$this->view_data['game'] = $this->game;
-		
-		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
-		
-		
 		$_SESSION['game'] = $this->game;
 		
 		//一番目のプレイヤーの待機画面に遷移
 		Response::redirect('confplayer');	//実験的にコメントアウト
-		//View_Wrap::contents('confplayer', $this->view_data);	//実験的に記述
 	}
 }
