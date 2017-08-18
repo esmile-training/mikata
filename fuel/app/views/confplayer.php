@@ -4,9 +4,9 @@
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['cocoa'] as $value)
 	{
-		echo '<p><a class="modal_btn def">';
+		echo '<a class="modal_btn def">';
 		echo $mikata_answer[$value]['answer'];
-		echo '</a></p></br>';
+		echo '</a></br>';
 	}
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['chino'] as $value)
