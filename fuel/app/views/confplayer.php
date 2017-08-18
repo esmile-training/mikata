@@ -1,10 +1,4 @@
-<div>
-<?php foreach($game['hand']['chino'] as $value)
-	{
-		echo $mikata_answer[$value]['answer'];
-	}
-?>
-</div>
+<?= print_r($game) ?>
 
 <div>
 	<table>
