@@ -4,6 +4,6 @@
 //		echo $mikata_answer[$value]['answer'];
 //		echo '</br>';
 //	}
-	var_dump($_SESSION['game']);
+	print_r($_SESSION['game']['player']);
 ?>
 </div>
