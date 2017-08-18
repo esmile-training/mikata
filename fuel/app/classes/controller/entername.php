@@ -33,6 +33,8 @@ class Controller_entername extends Controller_Base_Game
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
 		
 		$this->view_data['game'] = $this->game;
+		
+		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
                 
 		//一番目のプレイヤーの待機画面に遷移
 		//Response::redirect('confplayer');	//実験的にコメントアウト
