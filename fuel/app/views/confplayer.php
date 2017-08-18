@@ -1,4 +1,8 @@
 <div>
+	<?= $mikata_answer['answer'][0] ?>
+</div>
+
+<div>
 	<table>
 		<?php foreach ($mikata_answer as $answer): ?>
 			<tr>
