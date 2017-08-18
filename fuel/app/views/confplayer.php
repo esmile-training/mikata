@@ -1,5 +1,9 @@
 <div>
-	<?= print_r($mikata_answer['1']['answer'])?>
+<?php foreach($game['hand']['chino'] as $value)
+	{
+		echo $mikata_answer[$value]['answer'];
+	}
+?>
 </div>
 
 <div>
