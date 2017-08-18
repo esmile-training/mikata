@@ -4,10 +4,12 @@
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['cocoa'] as $value)
 	{
-		echo '<a class="modal_btn cfmanser">';
+		$i = 1;
+		echo '<a class="modal_btn cfmanser"'.$i.'>';
 		echo $mikata_answer[$value]['answer'];
 		echo '</a></br>';
-		echo View::forge('popup/wrap', array('name' => 'cfmanser1', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
+		echo View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
+		$i++;
 	}
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['chino'] as $value)
