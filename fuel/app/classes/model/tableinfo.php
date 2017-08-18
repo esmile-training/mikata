@@ -47,7 +47,7 @@ class Model_tableinfo extends Model
 
 	public static function picThemeCard($round, $themeStock = array())
 	{
-		$themeId = $themeDeck[$round];
+		$themeId = $themeStock[$round];
 		return $themeId;
 	}
 }
