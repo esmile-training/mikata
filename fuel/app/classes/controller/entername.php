@@ -36,7 +36,7 @@ class Controller_entername extends Controller_Base_Game
 		
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
         
-		Session::set('game', array($this->game));
+		Session::set('game', array('sattus' => $this->game['status']));
 		
 		//一番目のプレイヤーの待機画面に遷移
 		Response::redirect('confplayer');	//実験的にコメントアウト
