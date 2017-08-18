@@ -6,6 +6,9 @@ class Controller_confPlayer extends Controller_Base_Game
 	{
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
 		
+		print_r($this->view_data['$game']);
+		exit;
+		
 		return View_Wrap::contents('confplayer',$this->view_data);
 	}
 }
