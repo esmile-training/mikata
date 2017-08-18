@@ -2,7 +2,7 @@
 
 class Model_Deckinfo extends Model
 {
-	static $_myWorldCardAll = 90;
+	static $_myWorldCardAll = 162;
 	static $_thatCardAll = 392;
 	public static $themeStock = array();
 	public static $answerStock = array();
