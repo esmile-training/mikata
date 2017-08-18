@@ -8,7 +8,7 @@ class Controller_confPlayer extends Controller_Base_Game
 		$themeStock = $_SESSION['game']['deck']['themeStock'];
 		
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
-		exit;
+		//exit;
 		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
 		exit;
 		//$_SESSION['game']['table']['status']['currentTheme'] = Model_tableinfo::picThemeCard($table[1],$themeStock);
