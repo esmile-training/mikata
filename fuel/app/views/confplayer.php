@@ -5,6 +5,6 @@
 		echo $mikata_answer[$value]['answer'];
 		echo '</br>';
 	}
-	print_r($_SESSION['game']['table']['player']);
+	print_r($_SESSION['game']['hand']);
 ?>
 </div>
