@@ -36,6 +36,6 @@ class Controller_entername extends Controller_Base_Game
                 
 		//一番目のプレイヤーの待機画面に遷移
 		//Response::redirect('confplayer');	//実験的にコメントアウト
-		View_Wrap::contents('confPlayer', $this->view_data);	//実験的に記述
+		View_Wrap::contents('confplayer', $this->view_data);	//実験的に記述
 	}
 }
