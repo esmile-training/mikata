@@ -9,8 +9,8 @@ class Controller_confPlayer extends Controller_Base_Game
 		
 		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
-		exit;
-		//$_SESSION['game']['table']['status']['currentTheme'] = Model_tableinfo::picThemeCard($table[1],$themeStock);
+		
+		$_SESSION['game']['table']['status']['currentTheme'] = Model_tableinfo::picThemeCard($table[1],$themeStock);
 		
 		return View_Wrap::contents('confplayer',$this->view_data);
 	}
