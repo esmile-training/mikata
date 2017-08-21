@@ -6,10 +6,9 @@ var id = '';
 		function(){
 			target = $(this).get(0).className.split(" ")[1];	//この時点ではまだ文字列
 			//3つ目の引数としてidを追加
-			console.log(target);
 			if($(this).get(0).className.split(" ")[2]) id = $(this).get(0).className.split(" ")[2];
 			target = $("#modal-" + target);	//ここで意味不明に変わる
-			console.log(target);
+			console.log(JSON.stringify(target));
 			// キーボード操作などにより、オーバーレイが多重起動するのを防止する
 			$(this).blur() ;	//ボタンからフォーカスを外す
 			//新しくモーダルウィンドウを起動しない
