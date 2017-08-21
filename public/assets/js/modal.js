@@ -15,7 +15,7 @@ var id = '';
 			if($("#modal-overlay")[0]) return false ;
 
 			// オーバーレイ用のHTMLコードを、[container]内の最後に生成する
-			$("#container").append('<div id="modal-overlay></div>') ;
+			$("#container").append('<div id="modal-overlay"></div>') ;
 			$("#modal-overlay").fadeIn("slow") ;
 
 			// コンテンツをフェードインする
