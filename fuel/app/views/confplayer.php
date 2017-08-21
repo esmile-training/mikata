@@ -11,7 +11,7 @@
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['cocoa'] as $value)
 	{
-		echo '<a onclick = "modalup(); return:false;">';
+		echo '<a onclick = "modalup(); return false;">';
 		echo $mikata_answer[$value]['answer'];
 		echo '</a>';
 		echo View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
