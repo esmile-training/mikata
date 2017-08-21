@@ -1,6 +1,6 @@
 <div id="modal-<?= $name ?>" class="modal-content-<?= $size ?>">
 	<?php //引き渡しデータがある場合 ?>
-	<?php $name = $name.explode(" ")[0]; ?>
+	<?php $name = explode(" ",$name)[0]; ?>
 	<?php if(isset($popup_data)){ ?>
 		<?= View::forge('popup/'.$name, array('popup_data'=>$popup_data)) ?>
 	<?php //引き渡しデータがない場合 ?>
