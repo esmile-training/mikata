@@ -5,10 +5,11 @@ var id = '';
 	$(".modal_btn").click(
 		function(){
 			target = $(this).get(0).className.split(" ")[1];
+			console.log(target);
 			//3つ目の引数としてidを追加
 			if($(this).get(0).className.split(" ")[2]) id = $(this).get(0).className.split(" ")[2];
 			target = $("#modal-" + target + id);
-			console.log(target);
+			
 			// キーボード操作などにより、オーバーレイが多重起動するのを防止する
 			$(this).blur() ;	//ボタンからフォーカスを外す
 			//新しくモーダルウィンドウを起動しない
