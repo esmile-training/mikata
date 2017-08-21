@@ -16,7 +16,7 @@
 		echo '</a>';
 		echo View::forge('popup/wrap', array('name' => 'cfmanser '.$count, 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
 		echo '</br>';
-		$i++;
+		$count++;
 	}
 	
 ?>
