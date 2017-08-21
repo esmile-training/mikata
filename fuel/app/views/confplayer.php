@@ -1,4 +1,10 @@
 <div>
+	<script type="text/javascript">
+		function modalup(word){
+			
+		}
+	</script>
+		
 <?php 
 	$i = 1;
 	echo $mikata_theme[$_SESSION['game']['table']['status']['currentTheme']]['theme'];
@@ -7,8 +13,9 @@
 	{
 		echo '<a class="modal_btn cfmanser">';
 		echo $mikata_answer[$value]['answer'];
-		echo '</a></br>';
+		echo '</a>';
 		echo View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
+		echo '</br>';
 		$i++;
 	}
 ?>
