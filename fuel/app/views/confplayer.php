@@ -1,7 +1,7 @@
 <div>
 	<script type="text/javascript">
-		function modalup(word){
-			
+		function modalup(){
+			$(this).attr(modal_btn cfmanser);
 		}
 	</script>
 		
@@ -11,7 +11,7 @@
 	echo '<br>';
 	foreach($_SESSION['game']['hand']['cocoa'] as $value)
 	{
-		echo '<a class="modal_btn cfmanser '.$count.'">';
+		echo '<a onclick = "modalup()">';
 		echo $mikata_answer[$value]['answer'];
 		echo '</a>';
 		echo View::forge('popup/wrap', array('name' => 'cfmanser', 'size' => 'normal', 'popup_data' => $mikata_answer[$value]['answer']));
