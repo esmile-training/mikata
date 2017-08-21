@@ -1,6 +1,7 @@
 <div>
 	<script type="text/javascript">
 		function modalup(){
+			console.log("click");
 			$(this).attr(modal_btn cfmanser);
 		}
 	</script>
