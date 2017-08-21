@@ -1,5 +1,5 @@
 <div>
-	<?= $game; ?>
+	<?= $table; ?>
 </div>
 
 <div>
