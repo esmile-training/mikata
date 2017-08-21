@@ -1,5 +1,5 @@
 <div>
-	<?= $table; ?>
+	<?= $_SESSION['game']; ?>
 </div>
 
 <div>
