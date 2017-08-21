@@ -2,7 +2,7 @@
 	<?php //引き渡しデータがある場合 ?>
 	<?php if(isset($popup_data)){ ?>
 	<?php echo $popup_data;
-	exit; ?>
+	 ?>
 		<?= View::forge('popup/'.$name, array('popup_data'=>$popup_data)) ?>
 	<?php //引き渡しデータがない場合 ?>
 	<?php }else{ ?>
