@@ -4,7 +4,7 @@ var target = '';
 		function(){
 			target = $(this).get(0).className.split(" ")[1];
 			target = $("#modal-" + target);
-			
+			console.log(target);
 			// キーボード操作などにより、オーバーレイが多重起動するのを防止する
 			$(this).blur() ;	//ボタンからフォーカスを外す
 			//新しくモーダルウィンドウを起動しない
