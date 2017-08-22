@@ -27,12 +27,12 @@ class Controller_maingame extends Controller_Base_Game
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
 		
 		//お題カードを引く
-		$this->game['table']['status']['currentTheme'] = Model_tableinfo::picThemeCard($this->game['table']['roundCount'],$this->game['deck']['themeStock']);
+		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
 		
 		//山札から一枚回答カードを引く
-		$this->game['table']['thatCardArray']['0'] = Model_tableinfo::picThatCard($this->game['deck']['themeStock']);
+		$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
 		
-		return View_Wrap::contents('checkplayer',$this->view_data);
+		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
 	public function action_enterAnswer()

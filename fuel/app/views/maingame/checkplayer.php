@@ -1,0 +1,1 @@
+<?= $game['table']['playerArray'][$game['table']['currentPlayer']]; ?>
