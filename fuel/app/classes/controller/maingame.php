@@ -41,6 +41,11 @@ class Controller_maingame extends Controller_Base_Game
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
+	public function action_selectAnswer()
+	{
+		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
+	}
+	
 	public function action_enterAnswer()
 	{
 		$param = input::post();
