@@ -45,6 +45,7 @@ class Controller_maingame extends Controller_Base_Game
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
 		
 		$this->view_data['game'] = $this->game;
+		print_r($this->view_data['game']);exit;
 		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
 	}
 	
