@@ -17,6 +17,6 @@ class Controller_entername extends Controller_Base_Game
 		$_SESSION['game'] = $this->game;
 		
 		//一番目のプレイヤーの待機画面に遷移
-		Response::redirect('maingame');
+		Response::redirect('maingame/index');
 	}
 }
