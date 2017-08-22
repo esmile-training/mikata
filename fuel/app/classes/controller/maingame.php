@@ -2,6 +2,8 @@
 
 class Controller_maingame extends Controller_Base_Game
 {
+	public $game = array();
+
 	public function action_index()
 	{			
 		//ラウンド数、現在のテーマID、現在の操作プレイヤーの配列
@@ -43,6 +45,7 @@ class Controller_maingame extends Controller_Base_Game
 	
 	public function action_selectAnswer()
 	{
+		$this->view_data['game'] = $this->game;
 		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
 	}
 	
