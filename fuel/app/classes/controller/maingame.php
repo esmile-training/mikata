@@ -39,7 +39,6 @@ class Controller_maingame extends Controller_Base_Game
 		
 		$this->view_data['game'] = $this->game;
 		
-		//Response::redirect('maingame/checkplayer');
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
