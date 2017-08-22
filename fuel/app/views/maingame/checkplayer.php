@@ -1,1 +1,1 @@
-<?php print_r($game); ?>
+<?= $game['table']['playerArray'][$game['table']['status']['currentPlayer']] ?>
