@@ -1,9 +1,7 @@
 <div>
 <?php
-	print_r($mikata_theme);
-	exit;
 	$count = 1;
-	echo $mikata_theme[$game['table']['status']['currentTheme']];
+	echo $mikata_theme[$game['table']['status']['currentTheme']]['theme'];
 	echo '<br>';
 	foreach($game['hand'][$game['table']['playerArray'][$game['table']['status']['currentPlayer']]] as $value)
 	{
