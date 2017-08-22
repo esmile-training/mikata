@@ -31,9 +31,9 @@ class Controller_maingame extends Controller_Base_Game
 		
 		//山札から一枚回答カードを引く
 		$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
-		print_r($this->view_data);
-		exit;
-		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
+
+		Response::redirect('maingame/checkplayer');
+		//return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
 	public function action_enterAnswer()
