@@ -44,8 +44,7 @@ class Controller_maingame extends Controller_Base_Game
 	
 	public function action_selectAnswer()
 	{
-		print_r($this->game);
-		print_r($this->view_data['game']);
+		$this->view_data = $this->game;
 		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
 	}
 	
