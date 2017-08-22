@@ -1,6 +1,6 @@
 <div>
 <?php
-	print_r($mikara_theme);
+	print_r($mikata_theme);
 	exit;
 	$count = 1;
 	echo $mikata_theme[$game['table']['status']['currentTheme']];
