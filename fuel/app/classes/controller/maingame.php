@@ -26,11 +26,7 @@ class Controller_maingame extends Controller_Base_Game
 		
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
-		
-		//csvファイルの読み込み
-		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
-		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
-		
+			
 		//お題カードを引く
 		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
 		
@@ -44,6 +40,10 @@ class Controller_maingame extends Controller_Base_Game
 	
 	public function action_selectAnswer()
 	{
+		//csvファイルの読み込み
+		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
+		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
+		
 		$this->view_data['game'] = $this->game;
 		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
 	}
