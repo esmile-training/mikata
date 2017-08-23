@@ -6,8 +6,6 @@ class Controller_Top extends Controller_Base_Game
 	{
 		\config::load('error');
 		$this->view_data['error_msg'] = ($error_code)? config::get('msg.'.$error_code) : false;
-		phpinfo();
-		exit;
 		View_Wrap::contents('top', $this->view_data);
 	}
 	
