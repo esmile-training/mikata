@@ -2,8 +2,6 @@
 
 class Controller_maingame extends Controller_Base_Game
 {
-	public $game;
-
 	public function action_index()
 	{			
 		//ラウンド数、現在のテーマID、現在の操作プレイヤーの配列
@@ -33,8 +31,8 @@ class Controller_maingame extends Controller_Base_Game
 		//山札から一枚回答カードを引く
 		$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
 		
-		$this->view_data['game'] = $this->game;
-		
+		$_SESSION['game'] = $this->game;
+
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
@@ -52,5 +50,6 @@ class Controller_maingame extends Controller_Base_Game
 	public function action_enterAnswer()
 	{
 		$param = input::post();
+		
 	}
 }
