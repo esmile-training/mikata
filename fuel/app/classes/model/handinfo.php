@@ -10,7 +10,7 @@ class Model_Handinfo extends Model
 		for($n = 1; $n <= self::$handall; $n++)
 		{
 			foreach(Model_tableinfo::$playerArray as $value)
-			{print_r(Model_Deckinfo::$answerStock);exit;
+			{print_r(Model_tableinfo::$playerArray);exit;
 				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$answerStock);
 			}
 		}
