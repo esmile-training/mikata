@@ -4,8 +4,6 @@ class Controller_maingame extends Controller_Base_Game
 {
 	public function action_index()
 	{	
-
-		var_dump($_SESSION['game']['table']);exit;
 		
 		//ラウンド数、現在のテーマID、現在の操作プレイヤーの配列
 		$this->game['table']['status'] = array('roundCount' => Model_tableinfo::$roundCount, 'currentTheme' => Model_tableinfo::$currentTheme, 'currentPlayer' => Model_tableinfo::$currentPlayer);
