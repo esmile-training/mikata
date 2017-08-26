@@ -1,4 +1,4 @@
-<?= $game = $_SESSION['game']['table'];
+<?= $game = array($_SESSION['game']['table']);
 
 $game['table']['playerArray'][$game['table']['status']['currentPlayer']] ?>
 さんの番です。
