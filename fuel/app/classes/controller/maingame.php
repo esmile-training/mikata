@@ -24,7 +24,7 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['deck'] = Model_Deckinfo::shuffleCard();
 		
 		//山札から手札を配る
-		$this->game['hand'] = Model_Handinfo::createPlayerHand();
+		$this->game['hand'] = Model_Handinfo::createPlayerHand($this->game['table']['playerArray']);
 		
 		//お題カードを引く
 		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
