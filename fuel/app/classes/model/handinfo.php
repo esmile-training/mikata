@@ -8,9 +8,9 @@ class Model_Handinfo extends Model
 	public static function createPlayerHand()
 	{	
 		for($n = 1; $n <= self::$handall; $n++)
-		{
+		{print_r(Model_tableinfo::$playerArray);exit;
 			foreach(Model_tableinfo::$playerArray as $value)
-			{print_r(Model_tableinfo::$playerArray);exit;
+			{
 				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$answerStock);
 			}
 		}
