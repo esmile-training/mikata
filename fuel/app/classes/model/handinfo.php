@@ -6,7 +6,7 @@ class Model_Handinfo extends Model
 	static $handall = 12;
 	
 	public static function createPlayerHand()
-	{	echo 'stop';exit;
+	{	print_r(Model_Deckinfo::$answerStock);exit;
 		for($n = 1; $n <= self::$handall; $n++)
 		{
 			foreach(Model_tableinfo::$playerArray as $value)
