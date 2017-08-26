@@ -25,7 +25,7 @@ class Controller_maingame extends Controller_Base_Game
 		
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
-		var_dump($this->game['hand']);exit;
+		
 		//お題カードを引く
 		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
 		

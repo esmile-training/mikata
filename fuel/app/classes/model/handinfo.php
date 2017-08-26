@@ -13,7 +13,7 @@ class Model_Handinfo extends Model
 			{
 				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$answerStock);
 			}
-		}
+		}print_r(self::$handarray);exit;
 		return self::$handarray;
 	}
 	
