@@ -11,7 +11,7 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['status'] = array('roundCount' => Model_tableinfo::$roundCount, 'currentTheme' => Model_tableinfo::$currentTheme, 'currentPlayer' => Model_tableinfo::$currentPlayer);
 		
 		//プレイヤーの配列をセッションから取り出し
-		$this->game['table']['playerArray'] = $_SESSION['game']['table']['player'];
+		$this->game['table']['playerArray'] = $_SESSION['game']['table']['playerArray'];
 		
 		//プレイヤーが出したそれカードの格納配列
 		$this->game['table']['thatCardArray'] = Model_tableinfo::setThatArray();
