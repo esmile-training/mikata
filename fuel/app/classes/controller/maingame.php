@@ -25,7 +25,7 @@ class Controller_maingame extends Controller_Base_Game
 		
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand();
-			
+			print_r($this->game['hand']);exit;
 		//お題カードを引く
 		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
 		
@@ -33,7 +33,7 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
 		
 		$_SESSION['game'] = $this->game;
-		print_r($_SESSION['game']);exit;
+		
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
