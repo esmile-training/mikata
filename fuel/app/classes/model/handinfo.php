@@ -6,14 +6,14 @@ class Model_Handinfo extends Model
 	static $handall = 12;
 	
 	public static function createPlayerHand()
-	{	print_r(Model_Deckinfo::$answerStock);exit;
+	{	
 		for($n = 1; $n <= self::$handall; $n++)
 		{
 			foreach(Model_tableinfo::$playerArray as $value)
 			{
 				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$answerStock);
 			}
-		}
+		}print_r(self::$handarray);exit;
 		return self::$handarray;
 	}
 	
