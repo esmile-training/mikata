@@ -42,7 +42,7 @@ class Controller_maingame extends Controller_Base_Game
 		//csvファイルの読み込み
 		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
-		
+		print_r($_SESSION['game']);exit;
 		$this->view_data['game'] = $_SESSION['game'];
 		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
 	}

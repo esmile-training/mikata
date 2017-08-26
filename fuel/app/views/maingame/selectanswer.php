@@ -1,6 +1,5 @@
 <div>
 <?php
-print_r($_SESSION['game']['hand']);
 print_r($game['hand']);
 exit;
 	$count = 1;
