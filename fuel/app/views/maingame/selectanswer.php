@@ -3,7 +3,7 @@
 	$count = 1;
 	echo $mikata_theme[$game['table']['status']['currentTheme']]['theme'];
 	echo '<br>';
-	foreach($game['hand'][$game['table']['playerArray'][$game['table']['status']['currentPlayer']]] as $value)
+	foreach($game['hand'][$game['table']['status']['currentPlayer']] as $value)
 	{
 		echo '<a class="modal_btn cfmanser '.$count.'">';
 		echo $mikata_answer[$value]['answer'];
