@@ -33,7 +33,7 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
 		
 		$_SESSION['game'] = $this->game;
-
+		print_r($_SESSION['game']);exit;
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
 	}
 	
