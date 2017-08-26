@@ -7,7 +7,7 @@ class Controller_maingame extends Controller_Base_Game
 		
 		//ラウンド数、現在のテーマID、現在の操作プレイヤーの配列
 		$this->game['table']['status'] = array('roundCount' => Model_tableinfo::$roundCount, 'currentTheme' => Model_tableinfo::$currentTheme, 'currentPlayer' => Model_tableinfo::$currentPlayer);
-		
+		print_r($_SESSION['game']['table']['playerArray']);exit;
 		//プレイヤーの配列をセッションから取り出し
 		$this->game['table']['playerArray'] = $_SESSION['game']['table']['playerArray'];
 		
@@ -42,7 +42,7 @@ class Controller_maingame extends Controller_Base_Game
 		//csvファイルの読み込み
 		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
 		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
-		print_r($_SESSION['game']);exit;
+
 		$this->view_data['game'] = $_SESSION['game'];
 		return View_Wrap::contents('maingame/selectanswer',$this->view_data);
 	}
