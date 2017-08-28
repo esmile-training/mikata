@@ -1,5 +1,5 @@
 <?php //検索フォーム ?>
-<?php phpinfo(); ?>
+<?php phpinfo();exit; ?>
 <?= Form::open(array('action' => 'top/login', 'method' => 'post')); ?>
 	<table>
 		<tr>
