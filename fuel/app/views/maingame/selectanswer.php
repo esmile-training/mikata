@@ -5,7 +5,7 @@
 	echo '<br>';
 	foreach($game['hand'][$game['table']['status']['currentPlayer']] as $value)
 	{
-		//echo '<a class="modal_btn cfmanser '.$count.'">';
+		echo '<a class="modal_btn cfmanser '.$count.'">';
 		echo '<a>';
 		echo $mikata_answer[$value]['answer'];
 		echo '</a>';
