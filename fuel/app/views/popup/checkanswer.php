@@ -1,7 +1,7 @@
 <div>
-	
+	この回答でよろしいですか?
 </div>
 
 <div>
-	<?= $popup_data ?>
+	<?= $mikata_answer[$value]['answer'] ?>
 </div>
