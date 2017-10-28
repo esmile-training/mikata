@@ -3,8 +3,7 @@
 class Controller_maingame extends Controller_Base_Game
 {
 	public function action_index()
-	{	
-		
+	{			
 		//ラウンド数、現在のテーマID、現在の操作プレイヤーの配列
 		$this->game['table']['status'] = array('roundCount' => Model_tableinfo::$roundCount, 'currentTheme' => Model_tableinfo::$currentTheme, 'currentPlayer' => Model_tableinfo::$currentPlayer);
 
@@ -49,7 +48,44 @@ class Controller_maingame extends Controller_Base_Game
 	
 	public function action_enterAnswer()
 	{
-		$param = input::post();
+		$param = input::post('answer');
+		$_SESSION['game']['table']['status']['thatCardArray'][] = $param;
+
+		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)
+		{
+			$_SESSION['game']['table']['status']['currentPlayer'] = 20;
+		} else {
+			$_SESSION['game']['table']['status']['currentPlayer'] += 1;
+		}
 		
+		$this->view_data['game'] = $_SESSION['game'];
+		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
+	}
+	
+	public function action_selectVote()
+	{
+		//csvファイルの読み込み
+		$this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
+		$this->view_data['mikata_answer'] = $this->csv->getAll('/mikata/answer');
+
+		$this->view_data['game'] = $_SESSION['game'];
+		return View_Wrap::contents('maingame/selectvote',$this->view_data);
+	}
+	
+	public  function action_enterVote()
+	{
+		$param = input::post('vote');
+		$_SESSION['game']['table']['votesArray'][$param] += 1;
+		
+		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)
+		{
+			$url = 'result';
+		} else {
+			$_SESSION['game']['table']['status']['currentPlayer'] += 1;
+		}
+		
+		$this->view_data['game'] = $_SESSION['game'];
+		//return View_Wrap::contents('maingame/checkplayer',$this->view_data);
+		return View_Wrap::contents('testpage',$this->view_data);
 	}
 }

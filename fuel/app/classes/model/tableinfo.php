@@ -4,7 +4,7 @@ class Model_tableinfo extends Model
 {
 	public static $roundCount = 1;
 	public static $currentTheme;
-	public static $currentPlayer = 0;
+	public static $currentPlayer = 10;
 	public static $playerNumber;
 	public static $playerArray = array();
 	public static $playerScoreArray = array();
