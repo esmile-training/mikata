@@ -29,8 +29,11 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
 		
 		//山札から一枚回答カードを引く
-		$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
-		
+		var_dump($this->game['deck']['answerStock'][0]);
+		$answer = $this->csv->getAll('/mikata/answer');
+		//$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
+		$this->game['table']['thatCardArray']['0'] = $answer[array_shift($this->game['deck']['answerStock'])]['answer'];
+		//var_dump($this->game['deck']['answerStock'][0]);
 		$_SESSION['game'] = $this->game;
 		
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);

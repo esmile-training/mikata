@@ -1,7 +1,8 @@
-	<?php $num = range(0, count($game['table']['playerArray'])); ?>
-	<?php $splice = array_splice($num, $game['table']["status"]["currentPlayer"]%10 + 1, 1)?>
-	<?php shuffle($num); ?>
-<?= var_dump($splice) ?>
+	<?php
+		$num = range(0, count($game['table']['playerArray']));
+		$splice = array_splice($num, $game['table']["status"]["currentPlayer"]%10 + 1, 1);
+		shuffle($num); 
+	?>
 <div>
 	<?php $count = 0; ?>
 	<?= $mikata_theme[$game['table']['status']['currentTheme']]['theme']; ?>
