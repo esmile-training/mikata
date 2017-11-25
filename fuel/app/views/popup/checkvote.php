@@ -3,7 +3,7 @@
 </div>
 
 <div>
-    <?= $game['table']['status']['thatCardArray'][$popup_data] //これだとCSVを読み込んでいないから動かない?>
+    <?= $popup_data ?>
 </div>
 
 <div>

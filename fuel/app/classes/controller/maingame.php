@@ -49,7 +49,8 @@ class Controller_maingame extends Controller_Base_Game
 	public function action_enterAnswer()
 	{
 		$param = input::post('answer');
-		$_SESSION['game']['table']['status']['thatCardArray'][] = $param;
+		$_SESSION['game']['table']['thatCardArray'][] = $param;
+		$_SESSION['game']['table']['votesArray'][$param] = 0;
 
 		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)
 		{
@@ -82,10 +83,11 @@ class Controller_maingame extends Controller_Base_Game
 			$url = 'result';
 		} else {
 			$_SESSION['game']['table']['status']['currentPlayer'] += 1;
+			$url = 'checkplayer';
 		}
 		
 		$this->view_data['game'] = $_SESSION['game'];
-		//return View_Wrap::contents('maingame/checkplayer',$this->view_data);
-		return View_Wrap::contents('testpage',$this->view_data);
+		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
+		//return View_Wrap::contents('testpage',$this->view_data);
 	}
 }
