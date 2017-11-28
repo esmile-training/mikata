@@ -1,15 +1,15 @@
 	<?php
-		$num = range(0, count($game['table']['playerArray']));
-		$splice = array_splice($num, $game['table']["status"]["currentPlayer"]%10 + 1, 1);
-		shuffle($num); 
+            $thatArray = $game['table']['thatCardArray'];
+            unset($thatArray[$game['table']["status"]["currentPlayerName"]]);
+            shuffle($thatArray);
 	?>
 <div>
 	<?php $count = 0; ?>
 	<?= $mikata_theme[$game['table']['status']['currentTheme']]['theme']; ?>
 	<br>
-	<?php foreach($num as $value): ?>
+	<?php foreach($thatArray as $value): ?>
 		<a class="modal_btn checkvote<?= $count ?>">
-		<?= $word = $game['table']['thatCardArray'][$value] ?>
+		<?= $word = $value ?>
 		</a>
 		<?= View::forge('popup/wraps', array('name' => 'checkvote', 'count' => $count, 'size' => 'normal', 'popup_data' => $word)); ?>
 		<br>

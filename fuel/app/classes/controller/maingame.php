@@ -11,15 +11,15 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['playerArray'] = $_SESSION['game']['table']['player'];
 		
 		//プレイヤーが出したそれカードの格納配列
-		$this->game['table']['thatCardArray'] = Model_tableinfo::setThatArray();
+		$this->game['table']['thatCardArray'] = Model_tableinfo::setThatArray($this->game['table']['playerArray']);
 		
 		//投票用の配列
 		$this->game['table']['votesArray'] = Model_tableinfo::setVotesArray();
 		
 		//プレイヤーのスコア格納配列
-		$this->game['table']['playerScoreArray'] = Model_tableinfo::setScoreArray(Model_tableinfo::$playerNumber);
+		$this->game['table']['playerScoreArray'] = Model_tableinfo::setScoreArray($this->game['table']['playerArray']);
+                
 		//山札をシャッフルする
-		//$this->game['deck'] = Model_Deckinfo::shuffleCard();
                 Model_Deckinfo::shuffleCard();
 		
 		//山札から手札を配る
@@ -32,7 +32,8 @@ class Controller_maingame extends Controller_Base_Game
 		//山札から一枚回答カードを引く
 		$answer = $this->csv->getAll('/mikata/answer');
                 $thatCard = Model_Handinfo::picThatCard();
-		$this->game['table']['thatCardArray']['0'] = $answer[$thatCard]['answer'];
+		$this->game['table']['thatCardArray']['cpu'] = $answer[$thatCard]['answer'];
+                $this->game['table']['votesArray'][$answer[$thatCard]['answer']] = 0;
 		$_SESSION['game'] = $this->game;
 		
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
@@ -51,7 +52,7 @@ class Controller_maingame extends Controller_Base_Game
 	public function action_enterAnswer()
 	{
 		$param = input::post('answer');
-		$_SESSION['game']['table']['thatCardArray'][] = $param;
+		$_SESSION['game']['table']['thatCardArray'][$_SESSION['game']['table']['status']['currentPlayerName']] = $param;
 		$_SESSION['game']['table']['votesArray'][$param] = 0;
 
 		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)

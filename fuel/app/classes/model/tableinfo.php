@@ -27,23 +27,26 @@ class Model_tableinfo extends Model
 		return self::$playerArray;
 	}
 	
-	public static function  setScoreArray($number)
+	public static function  setScoreArray(array $playerArray)
 	{
-		//self::$playerScoreArray = array(self::$playerNumber);
-                self::$playerScoreArray = array($number);
-		return self::$playerScoreArray;
+            foreach($playerArray as $value){
+                self::$playerScoreArray[$value] = 0;
+            }
+            return self::$playerScoreArray;
 	}
 
-	public static function setThatArray()
+	public static function setThatArray(array $playerArray)
 	{
-		self::$thatCardArray = array(self::$playerNumber);
-		return self::$thatCardArray;
+            foreach($playerArray as $value){
+		self::$thatCardArray[$value] = NULL;
+            }
+            return self::$thatCardArray;
 	}
 	
 	public static function setVotesArray()
 	{
 		self::$votesArray = array(self::$playerNumber);
-		return self::$votesArray;
+            return self::$votesArray;
 	}
 
 	public static function picThemeCard($round, $themeStock = array())
