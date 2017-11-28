@@ -17,23 +17,22 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['votesArray'] = Model_tableinfo::setVotesArray();
 		
 		//プレイヤーのスコア格納配列
-		$this->game['table']['playerScoreArray'] = Model_tableinfo::setScoreArray();
-		
+		$this->game['table']['playerScoreArray'] = Model_tableinfo::setScoreArray(Model_tableinfo::$playerNumber);
 		//山札をシャッフルする
-		$this->game['deck'] = Model_Deckinfo::shuffleCard();
+		//$this->game['deck'] = Model_Deckinfo::shuffleCard();
+                Model_Deckinfo::shuffleCard();
 		
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand($this->game['table']['playerArray']);
 		
 		//お題カードを引く
-		$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
+		//$this->game['table']['status']['currentTheme'] = array_shift($this->game['deck']['themeStock']);
+                $this->game['table']['status']['currentTheme'] = array_shift(Model_Deckinfo::$themeStock);
 		
 		//山札から一枚回答カードを引く
-		var_dump($this->game['deck']['answerStock'][0]);
 		$answer = $this->csv->getAll('/mikata/answer');
-		//$this->game['table']['thatCardArray']['0'] = array_shift($this->game['deck']['answerStock']);
-		$this->game['table']['thatCardArray']['0'] = $answer[array_shift($this->game['deck']['answerStock'])]['answer'];
-		//var_dump($this->game['deck']['answerStock'][0]);
+                $thatCard = Model_Handinfo::picThatCard();
+		$this->game['table']['thatCardArray']['0'] = $answer[$thatCard]['answer'];
 		$_SESSION['game'] = $this->game;
 		
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);

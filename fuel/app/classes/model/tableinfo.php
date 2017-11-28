@@ -27,9 +27,10 @@ class Model_tableinfo extends Model
 		return self::$playerArray;
 	}
 	
-	public static function  setScoreArray()
+	public static function  setScoreArray($number)
 	{
-		self::$playerScoreArray = array(self::$playerNumber);
+		//self::$playerScoreArray = array(self::$playerNumber);
+                self::$playerScoreArray = array($number);
 		return self::$playerScoreArray;
 	}
 

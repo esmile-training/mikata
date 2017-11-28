@@ -1,5 +1,4 @@
 <h1>人数を選択してください。</h1>
-<h2>テスト</h2>
 <div>
 	<?= Form::open(array('action' => 'setplayernumber/getPlayerNumber', 'method' => 'post'));?>
 		<select name= player>

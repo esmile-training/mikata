@@ -19,13 +19,15 @@ class Model_Handinfo extends Model
 	
 	public static function picThatCard()
 	{
-		foreach(self::$handarray as $key)
-		{
-			foreach ($key as $value)
-			{
-				//山札から引く処理
-				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$answerStock);
-			}
-		}
+//		foreach(self::$handarray as $key)
+//		{
+//			foreach ($key as $value)
+//			{
+//				//山札から引く処理
+//				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$answerStock);
+//			}
+//		}
+                $respnonse = array_shift(Model_Deckinfo::$answerStock);
+                return $respnonse;
 	}
 }
