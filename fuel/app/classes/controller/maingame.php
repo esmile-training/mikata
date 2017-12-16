@@ -83,14 +83,15 @@ class Controller_maingame extends Controller_Base_Game
 		
 		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)
 		{
-			$url = 'result';
+                    $this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
+                    $url = 'result';
 		} else {
 			$_SESSION['game']['table']['status']['currentPlayer'] += 1;
 			$url = 'checkplayer';
 		}
 		
 		$this->view_data['game'] = $_SESSION['game'];
-		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
+		return View_Wrap::contents('maingame/'.$url,$this->view_data);
 		//return View_Wrap::contents('testpage',$this->view_data);
 	}
 }

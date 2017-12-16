@@ -45,7 +45,7 @@ class Model_tableinfo extends Model
 	
 	public static function setVotesArray()
 	{
-		self::$votesArray = array(self::$playerNumber);
+            //self::$votesArray = array(self::$playerNumber);
             return self::$votesArray;
 	}
 
