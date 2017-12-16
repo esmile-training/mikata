@@ -6,7 +6,7 @@ body {
     margin: 30px auto;
     background-color: #FFF;
     width : 960px;
-    height: 580px;
+    height: 530px;
     color: #111;
     padding:10px;
 }
@@ -17,4 +17,8 @@ body {
 }
 .footer_developer th{
     text-align: right;
+}
+
+.footer_div {
+	background-image: none;
 }

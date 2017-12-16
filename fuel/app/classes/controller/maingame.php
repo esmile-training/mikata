@@ -52,8 +52,11 @@ class Controller_maingame extends Controller_Base_Game
 	public function action_enterAnswer()
 	{
 		$param = input::post('answer');
+		$id = input::post('id');
 		$_SESSION['game']['table']['thatCardArray'][$_SESSION['game']['table']['status']['currentPlayerName']] = $param;
 		$_SESSION['game']['table']['votesArray'][$param] = 0;
+		$workArray = array_diff($_SESSION['game']['hand'][$_SESSION['game']['table']['status']['currentPlayer'] % 10],array($id));
+		$_SESSION['game']['hand'][$_SESSION['game']['table']['status']['currentPlayer'] % 10] = array_values($workArray);
 
 		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)
 		{
