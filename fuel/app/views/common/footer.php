@@ -19,7 +19,7 @@
 		</tr>
 	</table>
 
-	<div>
+	<div class="footer_div">
 		<?= Html::anchor(ADMIN_URL, "管理画面へ", array("style" => "color:aqua")); ?>
 	</div>
 <?php endif; ?>
