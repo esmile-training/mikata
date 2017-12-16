@@ -16,5 +16,6 @@ $_SESSION['game']['table']['status']['currentPlayerName'] = $_SESSION['game']['t
 <?=	Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
 <?=	Form::close(); ?>
 <?= '<pre>' ?>
-<?= var_dump($_SESSION['game']['table']) ?>
+<!--<?= var_dump($_SESSION['game']['table']) ?>-->
+<?= var_dump($_SESSION['game']['hand']) ?>
 <?= '</pre>' ?>

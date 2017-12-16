@@ -7,7 +7,7 @@ class Model_Handinfo extends Model
 	
 	public static function createPlayerHand($playerArray = array())
 	{	
-		for($n = 1; $n <= self::$handall; $n++)
+		for($n = 0; $n <= self::$handall - 1; $n++)
 		{
 			foreach($playerArray as $key=>$value)
 			{
