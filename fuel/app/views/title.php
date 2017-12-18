@@ -6,5 +6,4 @@
 </style>
 <H1>私の世界の見方(仮題)</H1>
 <button onclick="location.href='setplayernumber'">スタート</button>
-<input type="image" src="http://esmile-sys.sakura.ne.jp/Mikata/img/start_1.jpg" alt="start">
-<input "location.href='setplayernumber'"><img src="sample.gif" alt="サンプル"></a>
+<a href='setplayernumber'><img <?= Asset::img('start_1.png',array('id'=>'enemmy_img')) ?> alt="スタート"></a>

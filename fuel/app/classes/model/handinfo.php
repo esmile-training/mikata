@@ -11,7 +11,7 @@ class Model_Handinfo extends Model
 		{
 			foreach($playerArray as $key=>$value)
 			{
-				self::$handarray[$key][$n] = array_shift(Model_Deckinfo::$answerStock);
+				self::$handarray[$value][$n] = array_shift(Model_Deckinfo::$answerStock);
 			}
 		}
 		return self::$handarray;
