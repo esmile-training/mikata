@@ -8,5 +8,7 @@
 		<?= View::forge('popup/'.$name) ?>
 	<?php } ?>
 	<?php //ポップアップウィンドウを閉じる ?>
-	<p><a id="modal-close">閉じる</a></p>
+    <div id="modal-close">
+        <?= Asset::img('no_1.png',array('id' => 'modal-close', 'src' => '閉じる')) ?>
+    </div>
 </div>

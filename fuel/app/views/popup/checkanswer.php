@@ -1,15 +1,15 @@
-<div>
+<div id="modal-theme">
 	この回答でよろしいですか?
 </div>
 
-<div>
-    <?= $popup_data['word'] ?>
+<div id="modal-answer">
+    <text id="modal-answer"><?= $popup_data['word'] ?></text>
 </div>
 
-<div>
-    <?= Form::open(array('action' => 'maingame/enterAnswer', 'method' => 'post'));?>
+<div id="modal-ok">
+    //<?= Form::open(array('action' => 'maingame/enterAnswer', 'method' => 'post'));?>
     <input type="hidden" name="answer" value="<?= $popup_data['word'] ?>" >
-	<input type="hidden" name="id" value="<?= $popup_data['id'] ?>" >
-    <?= Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
+    <input type="hidden" name="id" value="<?= $popup_data['id'] ?>" >
+    <?= Form::input(array('type' => 'image','name' => 'submit', 'src' => 'http://esmile-sys.sakura.ne.jp/Mikata/yoshida/public/assets/img/ok_g_1.png')) ?>
     <?= Form::close(); ?>
 </div>
