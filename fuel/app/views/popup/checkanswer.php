@@ -1,5 +1,7 @@
 <div id="modal-theme">
 	この回答でよろしいですか?
+        <br>
+        <?= $popup_data['theme'] ?>
 </div>
 
 <div id="modal-answer">
