@@ -3,7 +3,7 @@
 <?= Asset::js("jquery-3.2.1.min.js"); ?>
 <?= Asset::js("modal.js"); ?>
 
-<?php if($user['developer']): ?>
+<?php if($user['developer'] || 0):?>
 	<table class="footer_developer">
 		<tr>
 			<th>ユーザID：</th>

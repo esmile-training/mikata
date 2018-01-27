@@ -9,9 +9,9 @@
 <?php 
 if($_SESSION['game']['table']['status']['currentPlayer'] >= 20)
     {
-            $url = 'selectvote';
+		$url = 'selectvote';
     } else {
-            $url = 'selectanswer';
+		$url = 'selectanswer';
     }
 $player = $_SESSION['game']['table']['status']['currentPlayer'] % 10;
 $_SESSION['game']['table']['status']['currentPlayerName'] = $_SESSION['game']['table']['playerArray'][$player];

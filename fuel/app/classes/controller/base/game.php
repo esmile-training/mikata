@@ -6,8 +6,9 @@ class Controller_Base_Game extends Controller
 
 	public function __construct()
 	{
+		session_start();	//強制的にセッション開始
 		//ユーザ認証
-		$this->view_data['user'] = $this->user_authentication();
+		//$this->view_data['user'] = $this->user_authentication();	//認証回避
 		$this->view_data['user']['developer'] = $this->check_developer($this->view_data['user']); 
 		$this->view_data['user']['nowtime'] = $this->set_time($this->view_data['user']['developer'] ); 
         $this->view_data['game'] = array();

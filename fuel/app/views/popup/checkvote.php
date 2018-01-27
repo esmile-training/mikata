@@ -9,6 +9,6 @@
 <div>
     <?= Form::open(array('action' => 'maingame/entervote', 'method' => 'post'));?>
     <input type="hidden" name="vote" value="<?= $popup_data ?>" >
-    <?= Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
+	<?= Form::input(array('type' => 'image','name' => 'submit', 'src' => 'http://esmile-sys.sakura.ne.jp/Mikata/yoshida/public/assets/img/ok_g_1.png')) ?>
     <?= Form::close(); ?>
 </div>

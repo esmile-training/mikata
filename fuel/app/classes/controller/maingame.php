@@ -20,13 +20,13 @@ class Controller_maingame extends Controller_Base_Game
 		$this->game['table']['playerScoreArray'] = Model_tableinfo::setScoreArray($this->game['table']['playerArray']);
                 
 		//山札をシャッフルする
-                Model_Deckinfo::shuffleCard();
+        Model_Deckinfo::shuffleCard();
 		
 		//山札から手札を配る
 		$this->game['hand'] = Model_Handinfo::createPlayerHand($this->game['table']['playerArray']);
 		
 		//お題カードを引く
-                $this->game['table']['status']['currentTheme'] = array_shift(Model_Deckinfo::$themeStock);
+        $this->game['table']['status']['currentTheme'] = array_shift(Model_Deckinfo::$themeStock);
 		
 		//山札から一枚回答カードを引く
 		$answer = $this->csv->getAll('/mikata/answer');
