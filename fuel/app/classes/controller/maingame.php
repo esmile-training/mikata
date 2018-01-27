@@ -30,12 +30,21 @@ class Controller_maingame extends Controller_Base_Game
 		
 		//山札から一枚回答カードを引く
 		$answer = $this->csv->getAll('/mikata/answer');
-                $thatCard = Model_Handinfo::picThatCard();
+        $thatCard = Model_Handinfo::picThatCard();
 		$this->game['table']['thatCardArray']['cpu'] = $answer[$thatCard]['answer'];
-                $this->game['table']['votesArray'][$answer[$thatCard]['answer']] = 0;
+		
+		//山札から引いたカード用の投票枠作成
+        $this->game['table']['votesArray'][$answer[$thatCard]['answer']] = 0;
+		
 		$_SESSION['game'] = $this->game;
 		
 		return View_Wrap::contents('maingame/checkplayer',$this->view_data);
+	}
+	
+	public function action_start()
+	{
+		//お題カードを引く
+        $this->game['table']['status']['currentTheme'] = array_shift(Model_Deckinfo::$themeStock);
 	}
 	
 	public function action_selectAnswer()
@@ -85,8 +94,8 @@ class Controller_maingame extends Controller_Base_Game
 		
 		if($_SESSION['game']['table']['status']['currentPlayer'] % 10 >= count($_SESSION['game']['table']['playerArray']) - 1)
 		{
-                    $this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
-                    $url = 'result';
+            $this->view_data['mikata_theme'] = $this->csv->getAll('/mikata/theme');
+            $url = 'result';
 		} else {
 			$_SESSION['game']['table']['status']['currentPlayer'] += 1;
 			$url = 'checkplayer';
