@@ -3,7 +3,7 @@
 class Model_Handinfo extends Model
 {
 	public static $handarray = array(array());
-	static $handall = 12;
+	static $handall = 11;
 	
 	public static function createPlayerHand($playerArray = array())
 	{	
@@ -27,7 +27,8 @@ class Model_Handinfo extends Model
 //				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$answerStock);
 //			}
 //		}
-		$respnonse = array_shift(Model_Deckinfo::$answerStock);
-		return $respnonse;
+            var_dump(Model_Deckinfo::$answerStock);
+            $respnonse = array_shift(Model_Deckinfo::$answerStock);
+            return $respnonse;
 	}
 }

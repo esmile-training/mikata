@@ -11,5 +11,5 @@
 <br>
 <?php endforeach; ?>
 
-<a href='title'><?= Asset::img('end_1.png',array('alt' => 'タイトル')) ?></a>
+<a href='./../title'><?= Asset::img('end_1.png',array('alt' => 'タイトル')) ?></a>
 <a href='index'><?= Asset::img('next_1.png',array('alt' => 'リトライ')) ?></a>

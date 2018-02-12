@@ -28,14 +28,20 @@
     }
     div#modal-ok{
         position: relative;
-        left: 5%;
-        bottom: 10%;
-        width: 50%;
+        left: 13%;
+        bottom: 3%;
     }
     div#modal-close{
-        position: relative;
+       position: relative;
        left: 50%;
-       bottom: 50%;
+       bottom: 36%;
+    }
+    input#modal-ok{
+        width: 35%;
+    }
+    
+    img#modal-close{
+        width: 35%;
     }
 </style>
 

@@ -1,5 +1,7 @@
 body {
     color:#FFF;
+    font-family: YuGothicM;
+    font-weight: bold;
 }
 #container {
 	position: relative;
@@ -21,4 +23,8 @@ body {
 
 .footer_div {
 	background-image: none;
+}
+
+h1{
+    text-align: center;
 }
