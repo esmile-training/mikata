@@ -45,7 +45,7 @@ class Controller_maingame extends Controller_Base_Game
         //山札から一枚CPU用の回答カードを引く
         $answer = $this->csv->getAll('/mikata/answer');
         $thatCard = Model_Handinfo::picThatCard();
-        var_dump($thatCard);exit;
+        //var_dump($thatCard);exit;
         $this->game['table']['thatCardArray']['cpu'] = $answer[$thatCard]['answer'];
 
         //山札から引いたカード用の投票枠作成

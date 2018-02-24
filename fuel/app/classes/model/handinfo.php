@@ -27,7 +27,7 @@ class Model_Handinfo extends Model
 //				//self::$handarray[$value][$handall] = array_shift(Model_Deckinfo::$answerStock);
 //			}
 //		}
-            var_dump(Model_Deckinfo::$answerStock);
+            //var_dump(Model_Deckinfo::$answerStock);
             $respnonse = array_shift(Model_Deckinfo::$answerStock);
             return $respnonse;
 	}

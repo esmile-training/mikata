@@ -19,20 +19,19 @@
         select#name{
             top: auto;
         }
+		div#ander{
+			text-align: center;
+		}
 </style>
 <h1>プレイ人数を決めてください。</h1>
-<div id="form">
-    <?= Form::open(array('action' => 'setplayernumber/getPlayerNumber', 'method' => 'post'));?>
-        <select name= player id="form">
-        <option value= 3>3人</option>
-        <option value= 4>4人</option>
-        <option value= 5>5人</option>
-        <option value= 6>6人</option>
-        <option value= 7>7人</option>
-        <option value= 8>8人</option>
-        <option value= 9>9人</option>
-        </select>
-    <br>
-    <?= Form::input(array('type' => 'image','name' => 'submit', 'src' => 'http://esmile-sys.sakura.ne.jp/Mikata/yoshida/public/assets/img/ok_b_1.png')) ?>
-    <?= Form::close(); ?>
+<div id="">
+	<a href='setplayernumber/getplayernumber/3'><?= Asset::img('3_off.png',array('id' =>'','alt' => '3')) ?></a>
+	<a href='setplayernumber/getplayernumber/4'><?= Asset::img('4_off.png',array('id' =>'','alt' => '4')) ?></a>
+	<a href='setplayernumber/getplayernumber/5'><?= Asset::img('5_off.png',array('id' =>'','alt' => '5')) ?></a>
+	<a href='setplayernumber/getplayernumber/6'><?= Asset::img('6_off.png',array('id' =>'','alt' => '6')) ?></a>
+</div>
+<div id='ander'>
+	<a href='setplayernumber/getplayernumber/7'><?= Asset::img('7_off.png',array('id' =>'','alt' => '7')) ?></a>
+	<a href='setplayernumber/getplayernumber/8'><?= Asset::img('8_off.png',array('id' =>'','alt' => '8')) ?></a>
+	<a href='setplayernumber/getplayernumber/9'><?= Asset::img('9_off.png',array('id' =>'','alt' => '9')) ?></a>
 </div>
