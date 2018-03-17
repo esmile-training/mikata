@@ -14,7 +14,7 @@ class Controller_entername extends Controller_Base_Game
         //プレイヤー名を配列に格納
 		$_SESSION['game']['table']['player'][] = $param;
 
-		if(count($this->game['table']['player']) < $playerNumber)
+		if(count($this->view_data['game']['table']['player']) < $playerNumber)
 		{
 			View_Wrap::contents('entername',$this->view_data);
 		} else {
