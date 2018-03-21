@@ -49,6 +49,7 @@
         background-size: 100%;
         margin-top: 3%;
         margin-left: 9.5%;
+        padding-left: 3px;
         width: 560px;
         height: 154px;
         color: white;
@@ -105,10 +106,17 @@
         font-size: 18pt;
     }
 </style>
-
-<?php $count = 1; ?>
+<?php
+    $img = asset::img('Black_Box.png');
+    $row_theme = explode(',', $mikata_theme[$game['table']['status']['currentTheme']]['theme']);
+    $theme_back = $row_theme[count($row_theme) - 1];
+    $row_theme[count($row_theme) - 1] = $img;
+    $row_theme[] = $theme_back;
+    $theme = implode($row_theme);
+    $count = 1;
+?>
 <div id="top">
-    <p><?= $mikata_theme[$game['table']['status']['currentTheme']]['theme']; ?></p>
+    <p><?= $theme; ?></p>
 </div>
 <div id="bottom">
     <div id="inbox">

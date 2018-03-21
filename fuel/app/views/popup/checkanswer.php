@@ -1,8 +1,16 @@
+<?php
+    $img = asset::img('Black_Box.png');
+    $row_theme = explode(',', $popup_data['theme']);
+    $theme_back = $row_theme[count($row_theme) - 1];
+    $row_theme[count($row_theme) - 1] = $img;
+    $row_theme[] = $theme_back;
+    $theme = implode($row_theme);
+?>
 <div id="modal-theme">
 <br>
-<?='　　'?>この回答でよろしいですか?
+この回答でよろしいですか?
 <br><br>
-<?='　　'.$popup_data['theme'] ?>
+<?=$theme ?>
 </div>
 
 <div id="modal-answer">
