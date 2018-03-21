@@ -4,7 +4,6 @@
         background-image: url("http://esmile-sys.sakura.ne.jp/Mikata/img/bg_metal.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        overflow: hidden;
     }
     div#top{
         background-image: url("http://esmile-sys.sakura.ne.jp/Mikata/img/box_b_2.png");
@@ -107,7 +106,7 @@
     }
 </style>
 <?php
-    $img = asset::img('Black_Box.png');
+    $img = asset::img('Black_Box.png',array('id' =>'BlackBox','alt' => 'BB'));
     $row_theme = explode(',', $mikata_theme[$game['table']['status']['currentTheme']]['theme']);
     $theme_back = $row_theme[count($row_theme) - 1];
     $row_theme[count($row_theme) - 1] = $img;

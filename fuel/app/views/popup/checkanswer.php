@@ -1,5 +1,5 @@
 <?php
-    $img = asset::img('Black_Box.png');
+    $img = asset::img('Black_Box.png',array('id' =>'BlackBox','alt' => 'BB'));
     $row_theme = explode(',', $popup_data['theme']);
     $theme_back = $row_theme[count($row_theme) - 1];
     $row_theme[count($row_theme) - 1] = $img;

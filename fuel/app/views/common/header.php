@@ -10,3 +10,4 @@
 	<div id="container">
 		<?= Asset::css("common.css"); ?>
 		<?= Asset::css("modal.css"); ?>
+                <?= Asset::css("mikata.css"); ?>

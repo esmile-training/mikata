@@ -1,3 +1,6 @@
 body {
-	background-image: url("../img/bg_b_1.jpg");
+	/*background-image: url("../img/bg_b_1.jpg");*/
+}
+img#BlackBox{
+    width: 13%;
 }

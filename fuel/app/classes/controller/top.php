@@ -26,7 +26,6 @@ class Controller_Top extends Controller_Base_Game
 		}
 
 		// SESSIONに格納
-		session_start();
 		$_SESSION['user_id'] = $this->view_data['user']->id;
 
 		//ビュー表示
