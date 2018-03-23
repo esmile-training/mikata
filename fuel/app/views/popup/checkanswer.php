@@ -7,10 +7,7 @@
     $theme = implode($row_theme);
 ?>
 <div id="modal-theme">
-<br>
-この回答でよろしいですか?
-<br><br>
-<?=$theme ?>
+    <p id="modal"><?=$theme ?></p>
 </div>
 
 <div id="modal-answer">

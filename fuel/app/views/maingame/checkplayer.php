@@ -21,7 +21,14 @@
         margin-left: 9px;
         height: 63%;
     }
+    input#user-ok{
+        position: relative;
+        left: 57%;
+        padding-top: 40px;
+        width: 25%;
+    }
     p{
+        position: absolute;
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 25px;
@@ -47,16 +54,11 @@
 <p>
 <?= $_SESSION['game']['table']['playerArray'][$player] ?>
 さんの番です
-<br>
 <?= Form::open(array('action' => 'maingame/'.$url, 'method' => 'post')); ?>
-<?=	Form::button(null, '決定', array('type' => 'submit', 'style' => 'padding: 2px;')); ?>
-<?=	Form::close(); ?>
+<?= Form::input(array('type' => 'image','name' => 'submit', 'src' => 'http://esmile-sys.sakura.ne.jp/Mikata/yoshida/public/assets/img/ok_g_1.png', 'id' => 'user-ok')) ?>
+<?= Form::close(); ?>
 </p>
 </div>
 <div id="bottom">
-    <p>あああああ</p>
+
 </div>
-<?= '<pre>' ?>
-<?= var_dump($_SESSION['game']['table']) ?>
-<!--<?= var_dump($_SESSION['game']['hand']) ?>-->
-<?= '</pre>' ?>

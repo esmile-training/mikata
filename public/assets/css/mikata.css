@@ -4,3 +4,15 @@ body {
 img#BlackBox{
     width: 13%;
 }
+marquee#select{
+    padding-top: 14px;
+    padding-left: 0px;
+    margin-left: 21px;
+    margin-right: 199px;
+}
+p#modal{
+    padding-top: 23pt;
+    padding-left: 65pt;
+    padding-right: 65pt;
+    font-size: 18pt;
+}

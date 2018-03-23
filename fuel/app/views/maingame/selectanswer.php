@@ -85,7 +85,7 @@
     p{
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 70px;
+        padding-top: 15px;
         padding-left: 120px;
         padding-right: 120px;
         color:#FFF;
@@ -115,6 +115,7 @@
     $count = 1;
 ?>
 <div id="top">
+    <marquee id="select">空白に入りそうな言葉を選んで下さい</marquee>
     <p><?= $theme; ?></p>
 </div>
 <div id="bottom">

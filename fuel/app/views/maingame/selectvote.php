@@ -87,7 +87,7 @@
     p{
         margin-top: 0;
         margin-bottom: 0;
-        padding-top: 70px;
+        padding-top: 15px;
         padding-left: 120px;
         padding-right: 120px;
         color:#FFF;
@@ -110,7 +110,7 @@
     $thatArray = $game['table']['thatCardArray'];
     unset($thatArray[$game['table']["status"]["currentPlayerName"]]);
     shuffle($thatArray);
-    $img = asset::img('Black_Box.png');
+    $img = asset::img('Black_Box.png', array('id'=>'BlackBox'));
     $row_theme = explode(',', $mikata_theme[$game['table']['status']['currentTheme']]['theme']);
     $theme_back = $row_theme[count($row_theme) - 1];
     $row_theme[count($row_theme) - 1] = $img;
@@ -119,18 +119,19 @@
     $count = 0;
 ?>
 <div id="top">
+    <marquee id="select">空欄に一番合うと思う言葉を選んでください。</marquee>
     <p><?= $theme; ?></p>
 </div>
 <div id="bottom">
     <div id="inbox">
-<?php foreach($thatArray as $value): ?>
-    <div id="button">
-        <a class="modal_btn checkvote<?= $count ?>">
-        <?= $word = $value ?>
-        </a>
-    </div>
-    <?= View::forge('popup/wraps', array('name' => 'checkvote', 'count' => $count, 'size' => 'normal', 'popup_data' => array('theme' => $mikata_theme[$game['table']['status']['currentTheme']]['theme'],'word' => $word))); ?>
-    <?php $count++; ?>
-<?php endforeach; ?>
+        <?php foreach($thatArray as $value): ?>
+        <div id="button">
+            <a class="modal_btn checkvote<?= $count ?>">
+            <?= $word = $value ?>
+            </a>
+        </div>
+        <?= View::forge('popup/wraps', array('name' => 'checkvote', 'count' => $count, 'size' => 'normal', 'popup_data' => array('theme' => $mikata_theme[$game['table']['status']['currentTheme']]['theme'],'word' => $word))); ?>
+        <?php $count++; ?>
+        <?php endforeach; ?>
     </div>
 </div>
